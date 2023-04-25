@@ -1,2 +1,0 @@
-# uzdem
-Uzdem Data
