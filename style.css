@@ -87,5 +87,6 @@ header a h1 {
   width: 100%;
   height: auto;
   object-fit: cover;
-  aspect-ratio: 1/1;
+  aspect-ratio: 9/5;
+  border-radius: 10px;
 }
