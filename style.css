@@ -1,23 +1,27 @@
 /* Header Özelleştirme */
+/* header öğesi için stil tanımları */
 header {
-    align-items: center;
-    background-color: rgb(25, 118, 210);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-    justify-content: space-between;
-    display: flex;
-    padding: 10px;
-    margin: 10px;
-    border-radius: 5px;
+  align-items: center; /* Elemanları dikeyde hizalar */
+  background-color: rgb(25, 118, 210); /* Arkaplan rengi */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); /* Kutu gölgesi */
+  justify-content: space-between; /* Elemanları yatayda hizalar ve aralarında boşluk bırakır */
+  display: flex; /* Esnek kutu modelini kullanarak elemanları hizalar */
+  padding: 10px; /* Öğenin dolgusu */
+  margin: 10px; /* Öğenin kenar boşluğu */
+  border-radius: 5px; /* Kenar yarıçapı */
 }
 
+/* header öğesi altındaki tüm bağlantılar için stil tanımları */
 header a {
-    color: white;
-    text-decoration: none;
+  color: white; /* Yazı rengi */
+  text-decoration: none; /* Alt çizgi yok */
 }
 
+/* header öğesi altındaki h2 başlıkları için stil tanımları */
 header a h2 {
-    margin: 3px;
+  margin: 3px; /* Kenar boşluğu */
 }
+
 
 /* Arama Alanı Özelleştirmesi (Henüz Eklenmedi)
 .search-form {
