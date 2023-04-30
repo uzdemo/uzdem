@@ -1,0 +1,54 @@
+header {
+    align-items: center; /* Elemanları dikeyde hizalar */
+    background-color: rgb(25, 118, 210); /* Arkaplan rengi */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); /* Kutu gölgesi */
+    justify-content: space-between; /* Elemanları yatayda hizalar ve aralarında boşluk bırakır */
+    display: flex; /* Esnek kutu modelini kullanarak elemanları hizalar */
+    padding: 10px; /* Öğenin dolgusu */
+    margin: 10px; /* Öğenin kenar boşluğu */
+    border-radius: 5px; /* Kenar yarıçapı */
+}
+
+/* header öğesi altındaki tüm bağlantılar için stil tanımları */
+header a {
+    color: white; /* Yazı rengi */
+    text-decoration: none; /* Alt çizgi yok */
+}
+
+/* header öğesi altındaki h2 başlıkları için stil tanımları */
+header a h2 {
+    margin: 3px; /* Kenar boşluğu */
+}
+
+.container {
+    align-items: center; /* İçerikleri yatay olarak hizalar */
+    background-color: rgb(250, 250, 250); /* Arka plan rengi */
+    border-radius: 5px; /* Kenar yarıçapı */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); /* Kutu gölgesi */
+    padding: 15px; /* İç boşluk */
+    margin: 10px; /* Dış boşluk */
+    display: flex; /* İçerikleri esnek bir şekilde hizala */
+    flex-wrap: wrap; /* Satırları esnet */
+    justify-content: space-evenly; /* İçerikleri yatay olarak eşit aralıklarla hizala */
+}
+
+.container img {
+    width: 200px; /* Resimlerin genişliği */
+    border-radius: 50%; /* Kenar yarıçapı */
+    margin: 5px; /* Dış boşluk */
+}
+
+.container h3 {
+    text-align: center; /* Metni ortala */
+    margin: 5px; /* Dış boşluk */
+}
+
+.container .falanca p {
+    text-align: center; /* Metni ortala */
+    margin: 5px; /* Dış boşluk */
+}
+
+footer {
+    text-align: center; /* Metni ortala */
+}
+
