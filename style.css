@@ -2,11 +2,12 @@
 header {
     align-items: center;
     background-color: rgb(25, 118, 210);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     justify-content: space-between;
     display: flex;
     padding: 10px;
     margin: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 header a {
@@ -74,47 +75,90 @@ header a h2 {
 }
 /* Header Özelleştirmesi Sonu */
 
+/* Ana container */
 .container {
-  align-items: center;
-  background-color: lightgrey;
-  border-radius: 10px;
-  padding: 10px;
-  margin: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  align-items: center; /* İçerikleri yatay olarak hizalar */
+  background-color: rgb(250, 250, 250); /* Arka plan rengi */
+  border-radius: 5px; /* Kenar yarıçapı */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); /* Kutu gölgesi */
+  padding: 15px; /* İç boşluk */
+  margin: 10px; /* Dış boşluk */
+  display: flex; /* İçerikleri esnek bir şekilde hizala */
+  flex-wrap: wrap; /* Satırları esnet */
+  justify-content: space-evenly; /* İçerikleri yatay olarak eşit aralıklarla hizala */
 }
-  
+
+/* Box elementleri */
 .box {
-  background-color: rgb(243, 242, 242);
-  border-radius: 10px;
-  flex-basis: 25%;
-  margin: 15px;
-  box-sizing: border-box;
-  min-width: 250px;
+  animation-name: change-color; /* Animasyon adı */
+  animation-duration: 2s; /* Animasyon süresi */
+  animation-iteration-count: infinite; /* Animasyon tekrar sayısı */
+  background-color: #E0E0E0; /* Arka plan rengi */
+  border-radius: 15px; /* Kenar yarıçapı */
+  color: rgba(0, 0, 0, 0.87); /* Metin rengi */
+  flex-basis: 25%; /* Esnek kutu boyutu */
+  margin: 10px; /* Dış boşluk */
+  box-sizing: border-box; /* Kutu boyutunu sınırlandır */
+  min-width: 250px; /* Minimum kutu genişliği */
+  transition: background-color 0.3s ease-in-out, /* Geçiş efekti - arka plan rengi */
+              transform 0.3s ease-in-out, /* Geçiş efekti - dönüşüm */
+              box-shadow 0.3s ease-in-out; /* Geçiş efekti - kutu gölgesi */
 }
-  
+
+/* Box elementleri üzerine gelindiğinde */
+.box:hover {
+  transform: scale(1.05); /* Boyutu artır */
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.2); /* Kutu gölgesi */
+  background-color: #D0D0D0; /* Arka plan rengi */
+}
+
+/* fadeIn animasyonu */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Opaklığı sıfıra ayarla */
+  }
+  to {
+    opacity: 1; /* Opaklığı bir'e ayarla */
+  }
+}
+
+/* Box elementi içindeki resim */
 .box img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  aspect-ratio: 9/5;
-  border-radius: 10px;
+  aspect-ratio: 9/5; /* En-boy oranı */
+  border-top-left-radius: 15px; /* Üst sol köşe yarıçapı */
+  border-top-right-radius: 15px; /* Üst sağ köşe yarıçapı */
+  height: auto; /* Yükseklik otomatik olarak ayarlanacak */
+  object-fit: cover; /* İçeriği tamamen kaplayacak şekilde resim boyutlandırılacak */
+  width: 100%; /* Genişlik %100 */
 }
 
+/* Box elementi içindeki link */
 .box a {
-  display: flex;
-  text-decoration: none;
-  color: black;
+  color: black; /* Link rengi */
+  display: flex; /* Elemanlar yan yana hizalanacak */
+  text-decoration: none; /* Link altı çizgisi kaldırılacak */
 }
 
+/* Box elementi içindeki başlık */
 .box h4 {
   margin: 0;
-  padding: 5px;
+  padding: 5px; /* Sol ve sağ 5 piksel iç boşluk */
 }
 
+/* Box elementi içindeki açıklama */
 .box p {
+  font-size: 14px; /* Yazı boyutu 14 piksel */
   margin: 0;
-  padding-left: 5px;
-  padding-bottom: 5px;
+  padding-bottom: 5px; /* Alt 5 piksel iç boşluk */
+  padding-left: 5px; /* Sol 5 piksel iç boşluk */
+}
+
+/* fadeIn animasyonu */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Opaklığı sıfıra ayarla */
+  }
+  to {
+    opacity: 1; /* Opaklığı bir'e ayarla */
+  }
 }
