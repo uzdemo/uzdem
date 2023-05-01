@@ -22,6 +22,29 @@ header a h2 {
   margin: 3px; /* Kenar boşluğu */
 }
 
+/* nav öğesi için stil tanımları */
+nav {
+  display: flex; /* Esnek kutu modelini kullanarak elemanları hizalar */
+  justify-content: space-between; /* Elemanları yatayda hizalar ve aralarında boşluk bırakır */
+}
+
+/* nav öğesi altındaki tüm bağlantılar için stil tanımları */
+nav .nav-links {
+  display: flex; /* Esnek kutu modelini kullanarak elemanları hizalar */
+  list-style-type: none; /* Madde işaretlerini kaldır */
+  margin: 0; /* Kenar boşluğu */
+  padding: 0; /* Öğenin dolgusu */
+  background-color: #E0E0E0;
+  border-radius: 5px;
+}
+
+nav .nav-links a {
+  color: black; /* Yazı rengi */
+  display: block; /* Öğeleri blok olarak hizala */
+  text-decoration: none; /* Alt çizgi yok */
+  margin: 0; /* Kenar boşluğu */
+  padding: 3px; /* Öğenin dolgusu */
+}
 
 /* Arama Alanı Özelleştirmesi (Henüz Eklenmedi)
 .search-form {
