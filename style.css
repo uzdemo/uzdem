@@ -120,7 +120,7 @@ nav .nav-links a {
   animation-name: change-color; /* Animasyon adı */
   animation-duration: 2s; /* Animasyon süresi */
   animation-iteration-count: infinite; /* Animasyon tekrar sayısı */
-  background-color: #E0E0E0; /* Arka plan rengi */
+  background-color: #eaeaea; /* Arka plan rengi */
   border-radius: 10px; /* Kenar yarıçapı */
   color: rgba(0, 0, 0, 0.87); /* Metin rengi */
   flex-basis: 30%; /* Esnek kutu boyutu */
@@ -161,9 +161,7 @@ nav .nav-links a {
 
 /* Box elementi içindeki link */
 .box a {
-  color: rgba(0, 0, 0, 0.87); /* Link rengi */
   display: flex; /* Elemanlar yan yana hizalanacak */
-  text-decoration: none; /* Link altı çizgisi kaldırılacak */
 }
 
 /* Box elementi içindeki başlık */
@@ -171,16 +169,16 @@ nav .nav-links a {
   margin: 0;
   overflow: hidden; /* Taşan içeriği gizle */
   text-overflow: ellipsis; /* Taşan içeriği üç nokta ile göster */
-  padding: 10px; /* Sol ve sağ 10 piksel iç boşluk */
+  padding: 15px 5px; /* Sol ve sağ 10 piksel iç boşluk */
   white-space: nowrap; /* Metni satır sonuna kadar uzat */
 }
 
-/* Box elementi içindeki açıklama */
+/* Box elementi içindeki paragraf şimdilik kullanımdan kaldırıldı */
 .box p {
-  font-size: 14px; /* Yazı boyutu 14 piksel */
-  margin: 0;
-  padding-bottom: 5px; /* Alt 5 piksel iç boşluk */
-  padding-left: 5px; /* Sol 5 piksel iç boşluk */
+  /*font-size: 14px;  Yazı boyutu 14 piksel */
+  /*margin: 0; Dış boşluk */
+  /*padding-bottom: 5px;  Alt 5 piksel iç boşluk */
+  /*padding-left: 5px;  Sol 5 piksel iç boşluk */
 }
 
 /* fadeIn animasyonu */
