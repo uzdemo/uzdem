@@ -126,7 +126,7 @@ nav .nav-links a {
   flex-basis: 30%; /* Esnek kutu boyutu */
   margin: 5px; /* Dış boşluk */
   box-sizing: border-box; /* Kutu boyutunu sınırlandır */
-  min-width: 200px; /* Minimum kutu genişliği */
+  min-width: 150px; /* Minimum kutu genişliği */
   transition: background-color 0.3s ease-in-out, /* Geçiş efekti - arka plan rengi */
               transform 0.3s ease-in-out, /* Geçiş efekti - dönüşüm */
               box-shadow 0.3s ease-in-out; /* Geçiş efekti - kutu gölgesi */
