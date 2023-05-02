@@ -121,12 +121,12 @@ nav .nav-links a {
   animation-duration: 2s; /* Animasyon süresi */
   animation-iteration-count: infinite; /* Animasyon tekrar sayısı */
   background-color: #E0E0E0; /* Arka plan rengi */
-  border-radius: 15px; /* Kenar yarıçapı */
+  border-radius: 10px; /* Kenar yarıçapı */
   color: rgba(0, 0, 0, 0.87); /* Metin rengi */
-  flex-basis: 25%; /* Esnek kutu boyutu */
-  margin: 10px; /* Dış boşluk */
+  flex-basis: 30%; /* Esnek kutu boyutu */
+  margin: 5px; /* Dış boşluk */
   box-sizing: border-box; /* Kutu boyutunu sınırlandır */
-  min-width: 250px; /* Minimum kutu genişliği */
+  min-width: 200px; /* Minimum kutu genişliği */
   transition: background-color 0.3s ease-in-out, /* Geçiş efekti - arka plan rengi */
               transform 0.3s ease-in-out, /* Geçiş efekti - dönüşüm */
               box-shadow 0.3s ease-in-out; /* Geçiş efekti - kutu gölgesi */
@@ -152,8 +152,8 @@ nav .nav-links a {
 /* Box elementi içindeki resim */
 .box img {
   aspect-ratio: 9/5; /* En-boy oranı */
-  border-top-left-radius: 15px; /* Üst sol köşe yarıçapı */
-  border-top-right-radius: 15px; /* Üst sağ köşe yarıçapı */
+  border-top-left-radius: 10px; /* Üst sol köşe yarıçapı */
+  border-top-right-radius: 10px; /* Üst sağ köşe yarıçapı */
   height: auto; /* Yükseklik otomatik olarak ayarlanacak */
   object-fit: cover; /* İçeriği tamamen kaplayacak şekilde resim boyutlandırılacak */
   width: 100%; /* Genişlik %100 */
@@ -161,7 +161,7 @@ nav .nav-links a {
 
 /* Box elementi içindeki link */
 .box a {
-  color: black; /* Link rengi */
+  color: rgba(0, 0, 0, 0.87); /* Link rengi */
   display: flex; /* Elemanlar yan yana hizalanacak */
   text-decoration: none; /* Link altı çizgisi kaldırılacak */
 }
@@ -169,7 +169,10 @@ nav .nav-links a {
 /* Box elementi içindeki başlık */
 .box h4 {
   margin: 0;
-  padding: 5px; /* Sol ve sağ 5 piksel iç boşluk */
+  overflow: hidden; /* Taşan içeriği gizle */
+  text-overflow: ellipsis; /* Taşan içeriği üç nokta ile göster */
+  padding: 10px; /* Sol ve sağ 10 piksel iç boşluk */
+  white-space: nowrap; /* Metni satır sonuna kadar uzat */
 }
 
 /* Box elementi içindeki açıklama */
