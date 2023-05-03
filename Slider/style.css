@@ -2,15 +2,17 @@
 .slider-container {
   position: relative;
   height: 300px;
-  width: 100%;
   max-width: 1200px;
+  margin: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgb(0 0 0 / 25%);
 }
 
 /* Slider wrapper styles */
 .slider-wrapper {
   display: flex;
-  width: calc(100% * 11);
-  transition: transform 0.5s ease-in-out;
+  transition: transform 1s ease-in-out;
 }
 
 /* Slider item styles */
