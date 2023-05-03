@@ -174,12 +174,12 @@ nav .nav-links a {
 }
 
 /* Box elementi içindeki paragraf şimdilik kullanımdan kaldırıldı */
-.box p {
+/*.box p {*/
   /*font-size: 14px;  Yazı boyutu 14 piksel */
   /*margin: 0; Dış boşluk */
   /*padding-bottom: 5px;  Alt 5 piksel iç boşluk */
   /*padding-left: 5px;  Sol 5 piksel iç boşluk */
-}
+/*}*/
 
 /* fadeIn animasyonu */
 @keyframes fadeIn {
