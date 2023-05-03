@@ -14,6 +14,8 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!-- Site Genel Stil Şablonu Yüklendi -->
     <link rel="stylesheet" href="style.css">
+    <!-- Slider Stil Şablonu Yüklendi -->
+    <link rel="stylesheet" href="Slider/style.css">
     <!-- Font Awesome ikon kütüphanesi yüklendi -->
     <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.css">
 </head> 
@@ -45,6 +47,44 @@
   <!--Arama Sonuöları Çalışması devam ediyor şimdilik kaldırıldı.
   <ul id="search-results"></ul>
   -->
+  <div class="slider-container">
+    <div class="slider-wrapper" id="slider">
+      <img src="Slider/Edebiyat.png" alt="">
+      <img src="Slider/Matematik.png" alt="">
+      <img src="Slider/Fen.png" alt="">
+      <img src="Slider/Fizik.png" alt="">
+      <img src="Slider/Kimya.png" alt="">
+      <img src="Slider/Biyoloji.png" alt="">
+      <img src="Slider/İngilizce.png" alt="">
+      <img src="Slider/Tarih.png" alt="">
+      <img src="Slider/Coğrafya.png" alt="">
+      <img src="Slider/Sosyal.png" alt="">
+      <img src="#" alt="">
+    </div>
+    
+    <div class="slider-controls">
+      <button class="slider-control prev" id="prevBtn">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="slider-control next" id="nextBtn">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>    
+    <div class="slider-dots">
+      <span class="slider-dot"></span>
+      <span class="slider-dot"></span>
+      <span class="slider-dot"></span>
+      <span class="slider-dot"></span>
+      <span class="slider-dot"></span>
+      <span class="slider-dot"></span>
+      <span class="slider-dot"></span>
+      <span class="slider-dot"></span>
+      <span class="slider-dot"></span>
+      <span class="slider-dot"></span>
+      <span class="slider-dot"></span>
+    </div>
+  </div>  
+
 
   <div class="container">
     <div class="box">
@@ -72,6 +112,7 @@
       <h4>Dini ve Ahlaki Eğitim Materyalleri</h4>
     </div>
   </div>
+  <script src="Slider/script.js"></script>
   <!--Site Alt Bilgisi Eklendi-->
   <footer>
       <p>© 2023 uzdem.dev Tüm hakları saklıdır.</p>

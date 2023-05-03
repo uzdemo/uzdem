@@ -1,0 +1,59 @@
+/* Slider container styles */
+.slider-container {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Slider wrapper styles */
+.slider-wrapper {
+  display: flex;
+  width: calc(100% * 11);
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Slider item styles */
+.slider-wrapper img {
+  border-radius: 10px;
+  margin: 10px;
+  max-width: 450px;
+}
+
+/* Slider nav styles */
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-controls button {
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Slider dot styles */
+.slider-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.slider-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.slider-dot.active {
+  background-color: #333;
