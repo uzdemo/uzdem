@@ -23,9 +23,9 @@ function checkIndex() {
 function updateSlider() {
   sliderWrapper.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
   for (let i = 0; i < dotsWrapper.children.length; i++) {
-    dotsWrapper.children[i].classList.remove('slider__dot--active');
+    dotsWrapper.children[i].classList.remove('active');
   }
-  dotsWrapper.children[slideIndex].classList.add('slider__dot--active');
+  dotsWrapper.children[slideIndex].classList.add('active');
 }
 
 // Sol ve sağ oklara tıklama olayını dinleyen fonksiyon

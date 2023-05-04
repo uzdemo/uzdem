@@ -10,7 +10,7 @@
 /* Slider wrapper styles */
 .slider-wrapper {
   display: flex;
-  transition: transform 1.5s ease-in-out;
+  transition: transform 1s ease-in-out;
 }
 
 /* Slider item styles */
@@ -54,4 +54,8 @@
   border-radius: 50%;
   margin-right: 10px;
   cursor: pointer;
+}
+
+.slider-dot.active {
+  background-color: #333;
 }
