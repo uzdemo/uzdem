@@ -1,8 +1,6 @@
 /* Slider container styles */
 .slider-container {
   position: relative;
-  height: 300px;
-  max-width: 1200px;
   margin: 10px;
   border-radius: 5px;
   overflow: hidden;
@@ -12,14 +10,15 @@
 /* Slider wrapper styles */
 .slider-wrapper {
   display: flex;
-  transition: transform 1s ease-in-out;
+  transition: transform 1.5s ease-in-out;
 }
 
 /* Slider item styles */
 .slider-wrapper img {
   border-radius: 10px;
   margin: 10px;
-  max-width: 450px;
+  margin-bottom: 25px;
+  max-width: 350px;
 }
 
 /* Slider nav styles */
@@ -33,7 +32,7 @@
 }
 
 .slider-controls button {
-  background: none;
+  background: silver;
   border: none;
   font-size: 30px;
   cursor: pointer;
@@ -42,7 +41,7 @@
 /* Slider dot styles */
 .slider-dots {
   position: absolute;
-  bottom: 10px;
+  bottom: 7px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;

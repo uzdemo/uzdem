@@ -6,7 +6,7 @@ const nextButton = document.getElementById("nextBtn");
 const dotsWrapper = document.querySelector('.slider-dots');
 
 const slideWidth = slides[0].clientWidth;
-const slidesToShow = 2;
+const slidesToShow = 1;
 const slidesToScroll = 1;
 let slideIndex = 0;
 
