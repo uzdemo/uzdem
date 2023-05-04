@@ -21,7 +21,7 @@ function checkIndex() {
 
 // Slider'ın görüntüsünü güncelleyen fonksiyon
 function updateSlider() {
-  sliderWrapper.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
+  sliderWrapper.style.transform = `translateX(-${slideIndex * (slideWidth + 10)}px)`;
   for (let i = 0; i < dotsWrapper.children.length; i++) {
     dotsWrapper.children[i].classList.remove('active');
   }
