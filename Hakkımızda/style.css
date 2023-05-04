@@ -32,10 +32,27 @@ header a h2 {
     justify-content: space-evenly; /* İçerikleri yatay olarak eşit aralıklarla hizala */
 }
 
-.container img {
-    width: 200px; /* Resimlerin genişliği */
-    border-radius: 50%; /* Kenar yarıçapı */
-    margin: 5px; /* Dış boşluk */
+.falanca {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px rgb(0 0 0 / 25%);
+}
+
+.falanca img {
+    width: calc(25% - 10px);
+    margin: 10px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    margin-bottom: 25px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 25%);
 }
 
 .container h3 {

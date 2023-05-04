@@ -25,6 +25,7 @@
   border-radius: 10px;
   aspect-ratio: 16/9;
   margin-bottom: 25px;
+  box-shadow: 0 0 10px rgb(0 0 0 / 25%);
 }
 
 /* Slider nav styles */
@@ -38,9 +39,9 @@
 }
 
 .slider-controls button {
-  background: silver;
+  background: rgba(192, 192, 192, 0.25);
   border: none;
-  font-size: 30px;
+  font-size: 25px;
   cursor: pointer;
 }
 
@@ -56,7 +57,7 @@
 .slider-dot {
   width: 10px;
   height: 10px;
-  background-color: #ccc;
+  background-color: #D0D0D0;
   border-radius: 50%;
   margin-right: 10px;
   cursor: pointer;
