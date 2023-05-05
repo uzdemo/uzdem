@@ -43,7 +43,7 @@ function kaydir() {
     kutuIndex = kutular.children.length - 1;
   }
 
-  kutular.style.transform = `translateX(-${kutuIndex * kutuGenislik}px)`;
+  kutular.style.transform = `translateX(-${kutuIndex * (kutuGenislik + 10)}px)`;
 }
 
 kaydir();
