@@ -6,8 +6,8 @@ const kutuKontrolSag = document.querySelector(".box-control .next-box");
 let kutuIndex = 0;
 let kutuGenislik = kutular.querySelector(".sliding-box").offsetWidth;
 let dokunmaX;
-let kaydirmaX;
-let dokunmaAktif = false;
+let baslangicX;
+let kutularinYeri;
 
 kutuKontrolSol.addEventListener("click", () => {
   kutuIndex--;
@@ -22,23 +22,26 @@ kutuKontrolSag.addEventListener("click", () => {
 kutular.addEventListener("touchstart", (e) => {
   const ilkDokunma = e.touches[0];
   dokunmaX = ilkDokunma.clientX;
-  dokunmaAktif = true;
+  baslangicX = dokunmaX;
+  kutularinYeri = parseInt(kutular.style.transform.replace("translateX(", "").replace("px)", ""));
 });
 
 kutular.addEventListener("touchmove", (e) => {
-  if (!dokunmaAktif) return;
   const sonDokunma = e.touches[0];
-  kaydirmaX = dokunmaX - sonDokunma.clientX;
-  kutular.style.transform = `translateX(${-kutuIndex * kutuGenislik - kaydirmaX}px)`;
+  const kaydirmaMesafesi = dokunmaX - sonDokunma.clientX;
+  kutular.style.transform = `translateX(${kutularinYeri - kaydirmaMesafesi}px)`;
 });
 
-kutular.addEventListener("touchend", () => {
-  if (kaydirmaX > 5) {
+kutular.addEventListener("touchend", (e) => {
+  const sonDokunma = e.changedTouches[0];
+  const kaydirmaMesafesi = baslangicX - sonDokunma.clientX;
+
+  if (kaydirmaMesafesi > kutuGenislik / 2) {
     kutuIndex++;
-  } else if (kaydirmaX < -5) {
+  } else if (kaydirmaMesafesi < -kutuGenislik / 2) {
     kutuIndex--;
   }
-  dokunmaAktif = false;
+
   kaydir();
 });
 
@@ -48,12 +51,8 @@ function kaydir() {
   } else if (kutuIndex > kutular.children.length - 1) {
     kutuIndex = kutular.children.length - 1;
   }
-  kutular.style.transition = "transform 0.3s ease-out";
-  kutular.style.transform = `translateX(${-kutuIndex * kutuGenislik}px)`;
-}
 
-kutular.addEventListener("transitionend", () => {
-  kutular.style.transition = "";
-});
+  kutular.style.transform = `translateX(-${kutuIndex * (kutuGenislik + 10)}px)`;
+}
 
 kaydir();
