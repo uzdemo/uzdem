@@ -7,9 +7,7 @@ let kutuIndex = 0;
 let kutuGenislik = kutular.querySelector(".sliding-box").offsetWidth;
 let dokunmaX;
 let kaydirmaX;
-
-const animasyonHizi = 500; // animasyon hızını burada ayarlayabilirsin, milisaniye cinsinden
-const gercekciKaydirmaMesafesi = 0.9; // kaydırma mesafesinin gerçekçiliğini burada ayarlayabilirsin, 0 ile 1 arasında bir değer olmalı
+let dokunmaAktif = false;
 
 kutuKontrolSol.addEventListener("click", () => {
   kutuIndex--;
@@ -24,21 +22,24 @@ kutuKontrolSag.addEventListener("click", () => {
 kutular.addEventListener("touchstart", (e) => {
   const ilkDokunma = e.touches[0];
   dokunmaX = ilkDokunma.clientX;
+  dokunmaAktif = true;
 });
 
 kutular.addEventListener("touchmove", (e) => {
+  if (!dokunmaAktif) return;
   const sonDokunma = e.touches[0];
   kaydirmaX = dokunmaX - sonDokunma.clientX;
+  kutular.style.transform = `translateX(${-kutuIndex * kutuGenislik - kaydirmaX}px)`;
 });
 
 kutular.addEventListener("touchend", () => {
-  if (kaydirmaX > kutuGenislik * gercekciKaydirmaMesafesi) {
+  if (kaydirmaX > 5) {
     kutuIndex++;
-    kaydir();
-  } else if (kaydirmaX < -kutuGenislik * gercekciKaydirmaMesafesi) {
+  } else if (kaydirmaX < -5) {
     kutuIndex--;
-    kaydir();
   }
+  dokunmaAktif = false;
+  kaydir();
 });
 
 function kaydir() {
@@ -47,9 +48,8 @@ function kaydir() {
   } else if (kutuIndex > kutular.children.length - 1) {
     kutuIndex = kutular.children.length - 1;
   }
-
-  kutular.style.transition = `transform ${animasyonHizi}ms ease-out`;
-  kutular.style.transform = `translateX(-${kutuIndex * (kutuGenislik + 10)}px)`;
+  kutular.style.transition = "transform 0.3s ease-out";
+  kutular.style.transform = `translateX(${-kutuIndex * kutuGenislik}px)`;
 }
 
 kutular.addEventListener("transitionend", () => {
