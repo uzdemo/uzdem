@@ -19,19 +19,25 @@ kutuKontrolSag.addEventListener("click", () => {
 kutular.addEventListener("touchstart", (e) => {
   const ilkDokunma = e.touches[0];
   let x = ilkDokunma.clientX;
+  let y = ilkDokunma.clientY;
 
   kutular.addEventListener("touchmove", (e) => {
     const dokunma = e.touches[0];
-    let jarak = x - dokunma.clientX;
+    let jarakX = x - dokunma.clientX;
+    let jarakY = y - dokunma.clientY;
 
-    if (jarak > 5) {
-      kutuIndex++;
-      kaydir();
-      x = dokunma.clientX;
-    } else if (jarak < -5) {
-      kutuIndex--;
-      kaydir();
-      x = dokunma.clientX;
+    if (Math.abs(jarakX) > Math.abs(jarakY)) {
+      if (jarakX > 5) {
+        kutuIndex++;
+        kaydir();
+        x = dokunma.clientX;
+      } else if (jarakX < -5) {
+        kutuIndex--;
+        kaydir();
+        x = dokunma.clientX;
+      }
+    } else {
+      y = dokunma.clientY;
     }
   });
 });
