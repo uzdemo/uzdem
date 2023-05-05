@@ -6,6 +6,7 @@ const kutuKontrolSag = document.querySelector(".box-control .next-box");
 let kutuIndex = 0;
 let kutuGenislik = kutular.querySelector(".sliding-box").offsetWidth;
 let dokunmaX;
+let kaydirmaX;
 
 kutuKontrolSol.addEventListener("click", () => {
   kutuIndex--;
@@ -24,16 +25,16 @@ kutular.addEventListener("touchstart", (e) => {
 
 kutular.addEventListener("touchmove", (e) => {
   const sonDokunma = e.touches[0];
-  const kaydirmaMesafesi = dokunmaX - sonDokunma.clientX;
+  kaydirmaX = dokunmaX - sonDokunma.clientX;
+});
 
-  if (kaydirmaMesafesi > 5) {
+kutular.addEventListener("touchend", () => {
+  if (kaydirmaX > 5) {
     kutuIndex++;
     kaydir();
-    dokunmaX = sonDokunma.clientX;
-  } else if (kaydirmaMesafesi < -5) {
+  } else if (kaydirmaX < -5) {
     kutuIndex--;
     kaydir();
-    dokunmaX = sonDokunma.clientX;
   }
 });
 
