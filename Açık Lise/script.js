@@ -36,9 +36,9 @@ kutular.addEventListener("touchend", (e) => {
   const sonDokunma = e.changedTouches[0];
   const kaydirmaMesafesi = baslangicX - sonDokunma.clientX;
 
-  if (kaydirmaMesafesi > kutuGenislik / 2) {
+  if (kaydirmaMesafesi > kutuGenislik / 4) {
     kutuIndex++;
-  } else if (kaydirmaMesafesi < -kutuGenislik / 2) {
+  } else if (kaydirmaMesafesi < -kutuGenislik / 4) {
     kutuIndex--;
   }
 
