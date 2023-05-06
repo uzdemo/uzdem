@@ -1,189 +1,88 @@
-/* Header Özelleştirme */
-/* header öğesi için stil tanımları */
 header {
-  align-items: center; /* Elemanları dikeyde hizalar */
-  background-color: rgb(25, 118, 210); /* Arkaplan rengi */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); /* Kutu gölgesi */
-  justify-content: space-between; /* Elemanları yatayda hizalar ve aralarında boşluk bırakır */
-  display: flex; /* Esnek kutu modelini kullanarak elemanları hizalar */
-  padding: 10px; /* Öğenin dolgusu */
-  margin: 10px; /* Öğenin kenar boşluğu */
-  border-radius: 5px; /* Kenar yarıçapı */
+  align-items: center;
+  background-color: rgb(25, 118, 210);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  justify-content: space-between;
+  display: flex;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
 }
 
-/* header öğesi altındaki tüm bağlantılar için stil tanımları */
 header a {
-  color: white; /* Yazı rengi */
-  text-decoration: none; /* Alt çizgi yok */
+  color: white;
+  text-decoration: none;
 }
 
-/* header öğesi altındaki h2 başlıkları için stil tanımları */
 header a h2 {
-  margin: 3px; /* Kenar boşluğu */
+  margin: 3px;
 }
 
-/* nav öğesi için stil tanımları */
 nav {
-  display: flex; /* Esnek kutu modelini kullanarak elemanları hizalar */
-  justify-content: space-between; /* Elemanları yatayda hizalar ve aralarında boşluk bırakır */
+  display: flex;
+  justify-content: space-between;
+  /*NOT: Bu projenin gelişiminde yeni menü ögelerinin eklenmesi muhtemeldir bu iki özellik şu anda ihtiyaç olmadığı halde eklenmiştir.*/
 }
 
-/* nav öğesi altındaki tüm bağlantılar için stil tanımları */
 nav .nav-links {
-  display: flex; /* Esnek kutu modelini kullanarak elemanları hizalar */
-  list-style-type: none; /* Madde işaretlerini kaldır */
-  margin: 0; /* Kenar boşluğu */
-  padding: 0; /* Öğenin dolgusu */
-  background-color: #E0E0E0;
+  display: flex; /*Yeni eklenecek menüler için uyumluluk amacı ile yazılmıştır.*/
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(250 250 250);
   border-radius: 5px;
 }
 
 nav .nav-links a {
-  color: black; /* Yazı rengi */
-  display: block; /* Öğeleri blok olarak hizala */
-  text-decoration: none; /* Alt çizgi yok */
-  margin: 0; /* Kenar boşluğu */
-  padding: 3px; /* Öğenin dolgusu */
+  color: black;
+  display: block;
+  margin: 0;
+  padding: 5px;
 }
 
-/* Arama Alanı Özelleştirmesi (Henüz Eklenmedi)
-.search-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.search-container {
-  background-color: white;
-  display: flex;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-}
-
-.search-container input[type="text"] {
-  border: none;
-  border-radius: 5px;
-}
-
-.search-container button {
-  border: none;
-  background-color: #ccc;
-  color: white;
-  padding: 7px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-}
-
-.search-container button:hover {
-  cursor: pointer;
-  background-color: #aaa;
-}
-*/
-
-/* Mobil Optimizasyonu */
-@media (max-width: 768px) {
-  /* Arama Kutusu Optimizasyonu */
-  /* (Henüz Eklenmedi) #search-box {
-    max-width: 100px;
-  }
-
-  .search-box input[type="text"] {
-    width: 150px;
-  }
-
-  .search-box button[type="submit"] {
-    width: 30px;
-    height: 30px;
-  }
-
-  .search-box button[type="submit"]:before {
-    font-size: 16px;
-  }*/
-}
-/* Header Özelleştirmesi Sonu */
-
-/* Ana container */
 .container {
-  align-items: center; /* İçerikleri yatay olarak hizalar */
-  background-color: rgb(250, 250, 250); /* Arka plan rengi */
-  border-radius: 5px; /* Kenar yarıçapı */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25); /* Kutu gölgesi */
-  padding: 15px; /* İç boşluk */
-  margin: 10px; /* Dış boşluk */
-  display: flex; /* İçerikleri esnek bir şekilde hizala */
-  flex-wrap: wrap; /* Satırları esnet */
-  justify-content: space-evenly; /* İçerikleri yatay olarak eşit aralıklarla hizala */
+  background-color: rgb(250, 250, 250);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  margin: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
-/* Box elementleri */
 .box {
-  animation-name: change-color; /* Animasyon adı */
-  animation-duration: 2s; /* Animasyon süresi */
-  animation-iteration-count: infinite; /* Animasyon tekrar sayısı */
-  background-color: #eaeaea; /* Arka plan rengi */
-  border-radius: 10px; /* Kenar yarıçapı */
-  color: rgba(0, 0, 0, 0.87); /* Metin rengi */
-  flex-basis: 30%; /* Esnek kutu boyutu */
-  margin: 5px; /* Dış boşluk */
-  min-width: 150px; /* Minimum kutu genişliği */
-  transition: background-color 0.3s ease-in-out, /* Geçiş efekti - arka plan rengi */
-              transform 0.3s ease-in-out, /* Geçiş efekti - dönüşüm */
-              box-shadow 0.3s ease-in-out; /* Geçiş efekti - kutu gölgesi */
+  background-color: #eaeaea;
+  border-radius: 10px;
+  color: rgba(0, 0, 0, 0.85);
+  flex-basis: 30%;
+  margin: 5px;
+  min-width: 150px;
+  transition: background-color 0.3s ease-in-out,
+              transform 0.3s ease-in-out,
+              box-shadow 0.3s ease-in-out;
 }
 
-/* Box elementleri üzerine gelindiğinde */
 .box:hover {
-  transform: scale(1.05); /* Boyutu artır */
-  box-shadow: 0px 0px 15px rgba(0,0,0,0.2); /* Kutu gölgesi */
-  background-color: #D0D0D0; /* Arka plan rengi */
+  transform: scale(1.05);
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+  background-color: #D0D0D0;
 }
 
-/* fadeIn animasyonu */
-@keyframes fadeIn {
-  from {
-    opacity: 0; /* Opaklığı sıfıra ayarla */
-  }
-  to {
-    opacity: 1; /* Opaklığı bir'e ayarla */
-  }
-}
-
-/* Box elementi içindeki resim */
 .box img {
-  aspect-ratio: 16/9; /* En-boy oranı */
-  border-top-left-radius: 10px; /* Üst sol köşe yarıçapı */
-  border-top-right-radius: 10px; /* Üst sağ köşe yarıçapı */
-  width: 100%; /* Genişlik %100 */
+  aspect-ratio: 16/9;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
 }
 
-/* Box elementi içindeki link */
 .box a {
-  display: flex; /* Elemanlar yan yana hizalanacak */
+  display: flex;
 }
 
-/* Box elementi içindeki başlık */
 .box h4 {
   margin: 0;
-  overflow: hidden; /* Taşan içeriği gizle */
-  text-overflow: ellipsis; /* Taşan içeriği üç nokta ile göster */
-  padding: 15px 5px; /* Sol ve sağ 10 piksel iç boşluk */
-  white-space: nowrap; /* Metni satır sonuna kadar uzat */
-}
-
-/* Box elementi içindeki paragraf şimdilik kullanımdan kaldırıldı */
-/*.box p {*/
-  /*font-size: 14px;  Yazı boyutu 14 piksel */
-  /*margin: 0; Dış boşluk */
-  /*padding-bottom: 5px;  Alt 5 piksel iç boşluk */
-  /*padding-left: 5px;  Sol 5 piksel iç boşluk */
-/*}*/
-
-/* fadeIn animasyonu */
-@keyframes fadeIn {
-  from {
-    opacity: 0; /* Opaklığı sıfıra ayarla */
-  }
-  to {
-    opacity: 1; /* Opaklığı bir'e ayarla */
-  }
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 15px 5px;
+  white-space: nowrap;
 }
