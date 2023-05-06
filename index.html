@@ -1,119 +1,87 @@
 <!DOCTYPE html>
 <html lang="tr">
   <head>
-    <!-- Meta İçerikler Eklendi -->
-    <!-- Karakter kodlaması UTF-8 olarak ayarlandı -->
     <meta charset="UTF-8">
-    <!-- IE uyumluluğu modu açıldı -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Cihazların genişliğine uygunluk ayarlandı -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Sayfa başlığı belirlendi -->
     <title>Uzdem</title>
-    <!-- Favicon eklendi -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <!-- Site Genel Stil Şablonu Yüklendi -->
     <link rel="stylesheet" href="style.css">
-    <!-- Slider Stil Şablonu Yüklendi -->
     <link rel="stylesheet" href="Slider/style.css">
-    <!-- Font Awesome ikon kütüphanesi yüklendi -->
     <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.css">
-</head> 
-
-<!-- Site İçeriği Başladı -->
-<body>
-  <!--Simple & Powerfull Header eklendi-->
-  <header>
-    <a href="index.html"><h2>UZDEM</h2></a>
-    <!--Gelecek projeler düşünülerek gelişmiş bir navigasyon sistemine sahip olması gerektiğine karar verilmiştir.-->
-    <nav>
-      <ul class="nav-links">
-        <li><a href="Hakkımızda/hakkımızda.html">Hakkımızda</a></li>
-      </ul>
-    </nav>
-
-    <!--Arama kutucuğu çalışması devam ediyor şimdilik kaldırıldı.
-    <form class="search-form">
-      <div class="search-container">
-        <input type="text" placeholder="Ara...">
-        <button type="submit">
-          <i class="fa fa-search"></i>
-        </button>
+  </head>
+  <body>
+    <header>
+      <a href="index.html"><h2>UZDEM</h2></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="Hakkımızda/hakkımızda.html">Hakkımızda</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="slider-container">
+      <div class="slider-wrapper" id="slider">
+        <img src="Slider/Edebiyat.png" alt="">
+        <img src="Slider/Matematik.png" alt="">
+        <img src="Slider/Fen.png" alt="">
+        <img src="Slider/Fizik.png" alt="">
+        <img src="Slider/Kimya.png" alt="">
+        <img src="Slider/Biyoloji.png" alt="">
+        <img src="Slider/İngilizce.png" alt="">
+        <img src="Slider/Tarih.png" alt="">
+        <img src="Slider/Coğrafya.png" alt="">
+        <img src="Slider/Sosyal.png" alt="">
       </div>
-    </form>
-    -->
-  </header>
-  
-  <!--Arama Sonuöları Çalışması devam ediyor şimdilik kaldırıldı.
-  <ul id="search-results"></ul>
-  -->
-  <div class="slider-container">
-    <div class="slider-wrapper" id="slider">
-      <img src="Slider/Edebiyat.png" alt="">
-      <img src="Slider/Matematik.png" alt="">
-      <img src="Slider/Fen.png" alt="">
-      <img src="Slider/Fizik.png" alt="">
-      <img src="Slider/Kimya.png" alt="">
-      <img src="Slider/Biyoloji.png" alt="">
-      <img src="Slider/İngilizce.png" alt="">
-      <img src="Slider/Tarih.png" alt="">
-      <img src="Slider/Coğrafya.png" alt="">
-      <img src="Slider/Sosyal.png" alt="">
+      <div class="slider-controls">
+        <button class="slider-control prev" id="prevBtn">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="slider-control next" id="nextBtn">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>    
+      <div class="slider-dots">
+        <span class="slider-dot"></span>
+        <span class="slider-dot"></span>
+        <span class="slider-dot"></span>
+        <span class="slider-dot"></span>
+        <span class="slider-dot"></span>
+        <span class="slider-dot"></span>
+        <span class="slider-dot"></span>
+        <span class="slider-dot"></span>
+        <span class="slider-dot"></span>
+        <span class="slider-dot"></span>
+      </div>
     </div>
-    
-    <div class="slider-controls">
-      <button class="slider-control prev" id="prevBtn">
-        <i class="fas fa-chevron-left"></i>
-      </button>
-      <button class="slider-control next" id="nextBtn">
-        <i class="fas fa-chevron-right"></i>
-      </button>
-    </div>    
-    <div class="slider-dots">
-      <span class="slider-dot"></span>
-      <span class="slider-dot"></span>
-      <span class="slider-dot"></span>
-      <span class="slider-dot"></span>
-      <span class="slider-dot"></span>
-      <span class="slider-dot"></span>
-      <span class="slider-dot"></span>
-      <span class="slider-dot"></span>
-      <span class="slider-dot"></span>
-      <span class="slider-dot"></span>
+    <div class="container">
+      <div class="box">
+        <a href="Ortaokul/Ortaokul.html">
+          <img src="Ortaokul/Ortaokul.webp" alt="Ortaokul Dersleri">
+        </a>
+        <h4>Ortaokul Eğitim Materyalleri</h4>
+      </div>
+      <div class="box">
+        <a href="Lise/Lise.html">
+          <img src="Lise/Lise.webp" alt="Lise Dersleri">
+        </a>
+        <h4>Lise Eğitim Materyalleri</h4>
+      </div>
+      <div class="box">
+        <a href="Açık Lise/Açık Lise.html">
+          <img src="Açık Lise/AÖL.webp" alt="Açıköğretim Lise Dersleri">
+        </a>
+        <h4>Açık Lise Eğitim Materyalleri</h4>
+      </div>
+      <div class="box">
+        <a href="Dini Dersler/Dini Dersler.html">
+          <img src="Dini Dersler/Dini Dersler.webp" alt="">
+        </a>
+        <h4>Dini ve Ahlaki Eğitim Materyalleri</h4>
+      </div>
     </div>
-  </div>
-
-
-  <div class="container">
-    <div class="box">
-      <a href="Ortaokul/Ortaokul.html">
-        <img src="Ortaokul/Ortaokul.webp" alt="Ortaokul Dersleri">
-      </a>
-      <h4>Ortaokul Eğitim Materyalleri</h4>
-    </div>
-    <div class="box">
-      <a href="Lise/Lise.html">
-        <img src="Lise/Lise.webp" alt="Lise Dersleri">
-      </a>
-      <h4>Lise Eğitim Materyalleri</h4>
-    </div>
-    <div class="box">
-      <a href="Açık Lise/Açık Lise.html">
-        <img src="Açık Lise/AÖL.webp" alt="Açıköğretim Lise Dersleri">
-      </a>
-      <h4>Açık Lise Eğitim Materyalleri</h4>
-    </div>
-    <div class="box">
-      <a href="Dini Dersler/Dini Dersler.html">
-        <img src="Dini Dersler/Dini Dersler.webp" alt="">
-      </a>
-      <h4>Dini ve Ahlaki Eğitim Materyalleri</h4>
-    </div>
-  </div>
-  <script src="Slider/script.js"></script>
-  <!--Site Alt Bilgisi Eklendi-->
-  <footer>
-      <p>© 2023 uzdem.dev Tüm hakları saklıdır.</p>
-  </footer>
-</body>
+    <script src="Slider/script.js"></script>
+    <footer>
+        <p>© 2023 uzdem.dev Tüm hakları saklıdır.</p>
+    </footer>
+  </body>
 </html>
