@@ -32,7 +32,7 @@ Uzdem platformuna katkıda bulunmak için yapabileceğiniz şeyler şunlardır:
 
 Uzdem platformu ile iletişime geçmek için aşağıdaki yolları kullanabilirsiniz:
 
-- E-posta: falanzat@outlook.com
+- E-posta: destek@uzdem.dev
 
 
 
