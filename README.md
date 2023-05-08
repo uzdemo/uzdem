@@ -33,8 +33,3 @@ Uzdem platformuna katkıda bulunmak için yapabileceğiniz şeyler şunlardır:
 Uzdem platformu ile iletişime geçmek için aşağıdaki yolları kullanabilirsiniz:
 
 - E-posta: destek@uzdem.dev
-
-
-
-
-
