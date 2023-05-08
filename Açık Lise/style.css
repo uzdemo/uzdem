@@ -60,6 +60,9 @@ nav .nav-links a {
 .line h3 {
   margin: 15px;
   margin-bottom: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .sliding-box-container {
@@ -131,5 +134,9 @@ nav .nav-links a {
 @media screen and (max-width: 1000px) {
   .sliding-box .box {
     width: calc(100vw / 2 - 37.5px);
+  }
+
+  .sliding-box .box h4 {
+    padding: 10px 5px;
   }
 }
