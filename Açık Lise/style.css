@@ -76,7 +76,7 @@ nav .nav-links a {
 }
 
 .sliding-box .box {
-  width: calc(100vw / 3);
+  width: calc(100vw / 3 - 37.5px);
   background-color: #eaeaea;
   border-radius: 10px;
   color: rgba(0, 0, 0, 0.85);
@@ -126,4 +126,10 @@ nav .nav-links a {
   font-size: 25px;
   cursor: pointer;
   pointer-events: auto;
+}
+
+@media screen and (max-width: 1000px) {
+  .sliding-box .box {
+    width: calc(100vw / 2 - 37.5px);
+  }
 }
