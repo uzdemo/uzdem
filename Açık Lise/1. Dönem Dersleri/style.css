@@ -1,0 +1,56 @@
+header {
+    align-items: center;
+    background-color: rgb(25, 118, 210);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    justify-content: space-between;
+    display: flex;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  
+  header a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  header a h2 {
+    margin: 3px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    /*NOT: Bu projenin gelişiminde yeni menü ögelerinin eklenmesi muhtemeldir bu iki özellik şu anda ihtiyaç olmadığı halde eklenmiştir.*/
+  }
+  
+  nav .nav-links {
+    display: flex; /*Yeni eklenecek menüler için uyumluluk amacı ile yazılmıştır.*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(250 250 250);
+    border-radius: 5px;
+  }
+  
+  nav .nav-links a {
+    color: black;
+    display: block;
+    margin: 0;
+    padding: 5px;
+  }
+  
+  .container {
+    background-color: rgb(250, 250, 250);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    margin: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .player {
+    aspect-ratio: 16/9;
+    width: 100%;
+  }

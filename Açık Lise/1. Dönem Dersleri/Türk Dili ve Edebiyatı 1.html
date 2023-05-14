@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Türk Dili ve Edebiyatı 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="../../index.html"><h2>UZDEM</h2></a>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="../../Hakkımızda/hakkımızda.html">Hakkımızda</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="container">
+        <div class="player">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/EYbyaUq2eKg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="notes">
+            <h1>Edebiyata Giriş</h1>
+            <h2>Edebiyatın Tanımı</h2>
+            <p>Arapça "edep" sözcüğünden türetilen ebebiyat kavramı, Avrupa'da daha çok "literatür" kelimesi ile karşılanır. Edebiyat doğrudan insanı ve insan hayatını konu alır ve insana hitâp eder.</p>
+            <p>Sanat: İnsanların çevresinde görüp algıladıklarını heyecan ve güzel duygular uyandıracak şekilde kendi bakış açısı ve yorumu ile yeniden oluşturmasıdır. Sanatçı (Sanatkâr): Sanat ürünlerini meydana getiren kişidir. Uğraştıkları dallara göre şair, edip, müzisyen, heykeltıraş gibi adlar alır.</p>
+            <table>
+                <caption>Güzel Sanatların Sınıflandırılması</caption>
+                <tr>
+                    <th>Fonetik (İşitsel) Sanatlar</th>
+                    <th>Plastik (Görsel) Sanatlar</th>
+                    <th>Ritmik (Dramatik) Sanatlar</th>
+                </tr>
+                <tr>
+                    <td>Edebiyat</td>
+                    <td>Resim</td>
+                    <td>Tiyatro</td>
+                </tr>
+                <tr>
+                    <td>Müzik</td>
+                    <td>Heykel</td>
+                    <td>Dans</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Fotoğraf</td>
+                    <td>Sinema</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Mimari</td>
+                    <td>Bale</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Hat</td>
+                    <td>Opera</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Ebru</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Marangozluk</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Malzemesi</th>
+                    <th>Malzemesi</th>
+                    <th>Malzemesi</th>
+                </tr>
+                <tr>
+                    <td>Kelime</td>
+                    <td>Taş</td>
+                    <td>Hareket</td>
+                </tr>
+                <tr>
+                    <td>Ses</td>
+                    <td>Toprak</td>
+                    <td>Sahne</td>
+                </tr>
+                <tr>
+                    <td>Nota</td>
+                    <td>Boya</td>
+                    <td>Oyuncu</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Tunç</td>
+                    <td></td>
+                </tr>
+            </table>
+            <div class="question-area">
+                <h3>Örnek</h3>
+                <div class="question">
+                    <p>Aşağıdakilerden hangisi ritmik (dramatik) sanatlar içinde yer almaz?</p>
+                </div>
+                <ul class="choices">
+                    <li><input type="radio" name="cevap" value="A">A) Edebiyat</li>
+                    <li><input type="radio" name="cevap" value="B">B) Tiyatro</li>
+                    <li><input type="radio" name="cevap" value="C">C) Sinema</li>
+                    <li><input type="radio" name="cevap" value="D">D) Bale</li>
+                </ul>
+                <button onclick="kontrolEt()">Cevapla</button>
+                <p class="note">Temmuz 2019</p>
+            </div>            
+            <form>
+                <h3>Örnek</h3>
+                <h4>Aşağıdakilerden hangisi ritmik (dramatik) sanatlar içinde yer almaz?</h4>
+                <input type="radio" name="cevap" value="A">A) Edebiyat<br>
+                <input type="radio" name="cevap" value="B">B) Tiyatro<br>
+                <input type="radio" name="cevap" value="C">C) Sinema<br>
+                <input type="radio" name="cevap" value="D">D) Bale<br>
+            </form>
+            <button onclick="kontrolEt()">Cevapla</button>
+            <script>
+                function kontrolEt(){
+                    var dogruCevap = "A";
+                    var secilenCevap = document.querySelector('input[name="cevap"]:checked').value;
+                    if(secilenCevap == dogruCevap){
+                        alert("Cevabınız doğru!");
+                    } else {
+                        alert("Cevabınız yanlış! Doğru cevap: " + dogruCevap);
+                    }
+                }
+            </script>
+
+        </div>
+      </div>
+</body>
+</html>
