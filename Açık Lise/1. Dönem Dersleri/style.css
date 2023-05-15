@@ -50,12 +50,101 @@ header {
     justify-content: space-evenly;
   }
 
+  .content {
+    background-color: rgb(250, 250, 250);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    margin: 10px;
+    padding: 15px;
+    width: 70%;
+  }
+
+  .player {
+    aspect-ratio: 16/9;
+    width: 100%;
+  }
+
+  .player iframe {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  }
+
+  .content .notes {
+    background-color: rgb(250, 250, 250);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    margin-top: 10px;
+    padding: 10px;
+  }
+
+  .content .notes h1{
+    text-align: center;
+  }
+
+  .content .notes caption {
+    font-size: large;
+    font-weight: bold;
+    padding: 10px;
+  }
+
+  .content .notes table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  .content .notes table, td {
+    border: 1px solid black;
+    padding: 5px;
+  }
+
+  .content .notes table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  .content .notes table th {
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+    background-color: rgb(25, 118, 210);
+    color: white;
+  }
+
+  .content .notes .question-area {
+    background-color: rgb(250, 250, 250);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    margin-top: 10px;
+    padding: 10px;
+  }
+
+  .content .notes .question-area h3{
+    background-color: rgb(225, 25, 25);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    color:rgb(250, 250, 250);
+    margin: 5px;
+    padding: 5px;
+    width: fit-content;
+  }
+
+  .content .notes .question-area .question {
+    margin: 5px;
+  }
+
+  .content .notes .question-area .question p {
+    margin-top: 10px;
+  }
+
+  .content .notes .question-area .question ul.choices {
+    margin: 5px;
+  }
+
   .units {
     background-color: rgb(250, 250, 250);
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     margin: 10px;
-    padding: 5px;
+    width: 20%;
   }
   
   .units p {
@@ -75,9 +164,4 @@ header {
     margin: 5px;
     padding: 5px;
     text-decoration: none;
-  }
-
-  .player {
-    aspect-ratio: 16/9;
-    width: 100%;
   }
