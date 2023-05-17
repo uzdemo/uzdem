@@ -1,49 +1,49 @@
 body {
-  background-color: rgb(250 250 250);
   font-family: 'Roboto', sans-serif;
   margin: 0;
 }
 
+header {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  padding: 5px;
+}
 
-/* Slider Stilleri */
-/* Slider container styles */
+header a img {
+  width: 15vw;
+}
+
 .slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   overflow: hidden;
 }
 
-/* Slider wrapper styles */
 .slider-wrapper {
   display: flex;
   transition: transform 1.5s ease-in-out;
 }
 
-/* Slider item styles */
 .slider-wrapper img {
   width: calc(50% - 10px);
   margin: 5px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 10px;
-  aspect-ratio: 16/9;
-  margin-bottom: 25px;
-  box-shadow: 0 0 10px rgb(0 0 0 / 25%);
+  border-radius: 5px;
+  margin-bottom: 5vh;
 }
 
-/* Slider nav styles */
 .slider-controls {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  width: calc(100vw - 30px);
 }
 
 .slider-controls button {
   background: black;
   color: white;
-  border: none;
   border-radius: 5px;
   font-size: 3vw;
   width: 6vw;
@@ -63,71 +63,24 @@ body {
 
 /* Slider dot styles */
 .slider-dots {
+  display: flex;
   position: absolute;
-  bottom: 7px;
+  bottom: 1px;
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
 }
 
 .slider-dot {
   width: 10px;
   height: 10px;
-  background-color: #D0D0D0;
+  background-color: lightgray;
   border-radius: 50%;
   margin-right: 10px;
   cursor: pointer;
 }
 
 .slider-dot.active {
-  background-color: rgba(0, 0, 0, 0.87);
-}
-
-
-
-header {
-  align-items: center;
-  background-color: white;
-  justify-content: space-between;
-  display: flex;
-  padding: 10px;
-}
-
-header a {
-  text-decoration: none;
-}
-
-header a img {
-  width: 10vw;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  /*NOT: Bu projenin gelişiminde yeni menü ögelerinin eklenmesi muhtemeldir bu iki özellik şu anda ihtiyaç olmadığı halde eklenmiştir.*/
-}
-
-nav .nav-links {
-  display: flex; /*Yeni eklenecek menüler için uyumluluk amacı ile yazılmıştır.*/
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  background-color: rgb(245, 245, 245);
-  border-radius: 5px;
-}
-
-nav .nav-links a {
-  color: black;
-  display: block;
-  margin: 0;
-  padding: 10px;
-  font-size: bold;
-}
-
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  background-color: black;
 }
 
 .line {
@@ -135,12 +88,8 @@ nav .nav-links a {
   position: relative;
 }
 
-.line h3 {
-  margin: 15px;
-  margin-bottom: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+.line h2 {
+  font-size: 4vw;
 }
 
 .sliding-box-container {
@@ -148,28 +97,10 @@ nav .nav-links a {
   transition: transform 1s ease-in-out;
 }
 
-.sliding-box-container .sliding-box {
-  display: flex;
-  margin: 5px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgb(0 0 0 / 25%);
-}
-
 .sliding-box .box {
-  width: calc(100vw / 3 - 37.5px);
-  background-color: #eaeaea;
+  width: calc(100vw / 3 - 30px);
   border-radius: 10px;
-  color: rgba(0, 0, 0, 0.85);
   margin: 5px;
-  transition: background-color 0.3s ease-in-out,
-              transform 0.3s ease-in-out,
-              box-shadow 0.3s ease-in-out;
-}
-
-.sliding-box .box:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
-  background-color: #D0D0D0;
 }
 
 .sliding-box .box img {
@@ -178,23 +109,12 @@ nav .nav-links a {
   width: 100%;
 }
 
-.sliding-box .box a {
-  display: flex;
-}
-
-.sliding-box .box h4 {
-  margin: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding: 15px 5px;
-  white-space: nowrap;
-}
-
 .box-control {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 100%;
+  left: 5px;
+  width: calc(100vw - 30px);
   display: flex;
   justify-content: space-between;
   pointer-events: none;
@@ -224,7 +144,7 @@ nav .nav-links a {
 
 @media screen and (max-width: 1000px) {
   .sliding-box .box {
-    width: calc(100vw / 2 - 37.5px);
+    width: calc(100vw / 2 - 20px);
   }
 
   .sliding-box .box h4 {
