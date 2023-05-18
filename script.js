@@ -105,9 +105,9 @@ kayanSatirlar.forEach((satir) => {
     const sonDokunma = e.changedTouches[0];
     const kaydirmaMesafesi = baslangicX - sonDokunma.clientX;
 
-    if (kaydirmaMesafesi > kutuGenislik / 4) {
+    if (kaydirmaMesafesi > kutuGenislik / 5) {
       kutuIndex++;
-    } else if (kaydirmaMesafesi < -kutuGenislik / 4) {
+    } else if (kaydirmaMesafesi < -kutuGenislik / 5) {
       kutuIndex--;
     }
 

@@ -1,12 +1,9 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'poppins', Arial;
   margin: 0;
 }
 
 header {
-  align-items: center;
-  justify-content: space-between;
-  display: flex;
   padding: 5px;
 }
 
@@ -30,7 +27,7 @@ header a img {
 .slider-wrapper img {
   width: calc(50% - 10px);
   margin: 5px;
-  border-radius: 5px;
+  border-radius: 10px;
   margin-bottom: 5vh;
 }
 
@@ -46,7 +43,7 @@ header a img {
   color: white;
   border-radius: 5px;
   font-size: 3vw;
-  width: 6vw;
+  width: 5vw;
   height: 5vw;
   cursor: pointer;
   opacity: 0;
@@ -61,7 +58,6 @@ header a img {
   opacity: 1;
 }
 
-/* Slider dot styles */
 .slider-dots {
   display: flex;
   position: absolute;
@@ -84,19 +80,21 @@ header a img {
 }
 
 .line {
+  display: grid;
+  justify-items: center;
   overflow-x: hidden;
   position: relative;
 }
 
 .line h2 {
-  font-size: 4vw;
+  font-size: 3vw;
 }
 
 .line-back {
   position: absolute;
   bottom: 0;
-  width: 100%;
-  height: 100px;
+  width: calc(100% - 10px);
+  height: 9.6vw;
   background: rgb(170, 215, 197);
   border-radius: 10px;
 }
@@ -107,9 +105,11 @@ header a img {
 }
 
 .sliding-box .box {
-  width: calc(100vw / 3 - 30px);
+  background: white;
+  width: calc(100vw / 3 - 36.8px);
+  height: 23.7vw;
   border-radius: 10px;
-  margin: 5px;
+  margin: 15px;
 }
 
 .sliding-box .box img {
@@ -151,9 +151,14 @@ header a img {
   opacity: 1;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 750px) {
+  .slider-wrapper img {
+    width: calc(100% - 10px);
+  }
+
   .sliding-box .box {
-    width: calc(100vw / 2 - 20px);
+    width: calc(100vw / 2 - 41.5px);
+    height: 32.1vw;
   }
 
   .sliding-box .box h4 {
