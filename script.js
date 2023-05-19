@@ -3,7 +3,7 @@ var nextButton = document.getElementById('nextBtn');
 var sliderContainer = document.querySelector('.slider');
 var currentSlide = 0;
 var slideInterval = setInterval(nextSlide, 5000);
-var slideWidth = sliderContainer.offsetWidth / 2;
+var slideWidth = sliderContainer.querySelector('img').offsetWidth;
 var totalSlides = sliderContainer.querySelectorAll('img').length;
 
 prevButton.addEventListener('click', function() {
