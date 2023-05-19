@@ -8,20 +8,27 @@ header {
 }
 
 header a img {
-  width: 15vw;
+  width: 15%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .slider-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: calc(100% - 15px);
   position: relative;
-  overflow: hidden;
+  overflow-x: scroll;
 }
 
 .slider-wrapper {
   display: flex;
-  transition: transform 1.5s ease-in-out;
+  transition: transform 1s ease-in-out;
 }
 
 .slider-wrapper img {
@@ -35,11 +42,11 @@ header a img {
   display: flex;
   justify-content: space-between;
   position: absolute;
-  width: calc(100vw - 30px);
+  width: calc(100% - 10px);
 }
 
 .slider-controls button {
-  background: black;
+  background: rgba(0, 0, 0, 0.75);
   color: white;
   border-radius: 5px;
   font-size: 3vw;
@@ -47,15 +54,15 @@ header a img {
   height: 5vw;
   cursor: pointer;
   opacity: 0;
-  transition: opacity 0.5s;
-}
-
-.slider-controls button:hover {
-  border: 1px solid blue;
+  transition: opacity 0.3s;
 }
 
 .slider-container:hover .slider-controls button {
   opacity: 1;
+}
+
+.slider-controls button:hover {
+  border: 1px solid blue;
 }
 
 .slider-dots {
