@@ -1,6 +1,6 @@
 var prevButton = document.getElementById('prevBtn');
 var nextButton = document.getElementById('nextBtn');
-var sliderContainer = document.querySelector('.slider');
+var sliderContainer = document.querySelector('.slidingArea');
 var currentSlide = 0;
 var slideInterval = setInterval(nextSlide, 5000);
 var slideWidth = sliderContainer.querySelector('img').offsetWidth;

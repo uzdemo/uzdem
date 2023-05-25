@@ -7,41 +7,40 @@ header {
   padding: 5px;
 }
 
-header a img {
+header img {
   width: 15%;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
-.sliderContainer {
+.slidingContainer {
   position: relative;
   display: flex;
   justify-content: center;
 }
 
-.slider {
+.slidingArea {
   display: flex;
   overflow-x: scroll;
   scroll-behavior: smooth;
   width: calc(100% - 20px);
 }
 
-.slider::-webkit-scrollbar {
+.slidingArea::-webkit-scrollbar {
   display: none;
 }
 
-.sliderContainer .slider img {
+.slidingArea img {
   max-width: 1280px;
   width: calc(100% / 2 - 10px);
   padding: 5px;
   border-radius: 15px;
 }
 
-.sliderContainer .sliderControls {
+.slidingContainer .sliderControls {
   position: absolute;
   width: calc(100% - 30px);
   height: 100%;
@@ -51,30 +50,104 @@ header a img {
   pointer-events: none;
 }
 
-.sliderContainer .sliderControls button {
+.sliderControls button {
   background: rgba(0, 0, 0, 0.75);
   color: white;
   border: none;
   border-radius: 5px;
   font-size: 100%;
-  width: 8vw;
-  height: 8vw;
+  width: 5vw;
+  height: 5vw;
   cursor: pointer;
   pointer-events: all;
   opacity: 0;
   transition: opacity 0.3s;
 }
 
-.sliderContainer:hover .sliderControls button {
+.slidingContainer:hover .sliderControls button {
   opacity: 1;
 }
 
-.sliderContainer .sliderControls button:hover {
+.sliderControls button:hover {
   border: 1px solid blue;
 }
 
+.container h1 {
+  font-size: 125%;
+}
+
+.box {
+  background: white;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.box a {
+  text-decoration: none;
+  color: rgb(50, 25, 25);
+}
+
+.box img {
+  width: calc(50vw / 2 - 30px);
+}
+
+.box p {
+  font-size: 2.2vw;
+  font-weight: bold;
+  margin: 0;
+  padding-top: calc(3vw - 10px);
+  padding-left: 1vw;
+  padding-bottom: 4vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lineControls {
+  position: absolute;
+  width: calc(100% - 40px);
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+}
+
+.lineControls button {
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 100%;
+  width: 5vw;
+  height: 5vw;
+  cursor: pointer;
+  pointer-events: all;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.slidingContainer:hover .lineControls button {
+  opacity: 1;
+}
+
+.slidingContainer .lineControls button:hover {
+  border: 1px solid blue;
+}
+
+.background {
+  position: absolute;
+  bottom: 0;
+  background: rgb(170, 215, 197);
+  border-radius: 10px;
+}
+
 @media screen and (max-width: 750px) {
-  .sliderContainer .slider img {
+  .slidingArea img {
     width: calc(100% - 10px);
+  }
+
+  .slidingArea .box img {
+    width: calc(50vw - 10px);
   }
 }
