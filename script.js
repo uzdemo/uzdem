@@ -1,29 +1,29 @@
-var prevButton = document.getElementById('prevBtn');
+var previousButton = document.getElementById('prevBtn');
 var nextButton = document.getElementById('nextBtn');
-var sliderContainer = document.querySelector('.slidingArea');
+var slidingArea = document.querySelector('.slidingArea');
 var currentSlide = 0;
 var slideInterval = setInterval(nextSlide, 5000);
-var slideWidth = sliderContainer.querySelector('img').offsetWidth;
-var totalSlides = sliderContainer.querySelectorAll('img').length;
+var slideWidth = slidingArea.querySelector('img').offsetWidth;
+var totalSlides = slidingArea.querySelectorAll('img').length;
 
-prevButton.addEventListener('click', function() {
+previousButton.addEventListener('click', function() {
   clearInterval(slideInterval);
-  sliderContainer.scrollLeft -= slideWidth;
+  slidingArea.scrollLeft -= slideWidth;
   slideInterval = setInterval(nextSlide, 5000);
 });
 
 nextButton.addEventListener('click', function() {
   clearInterval(slideInterval);
-  sliderContainer.scrollLeft += slideWidth;
+  slidingArea.scrollLeft += slideWidth;
   slideInterval = setInterval(nextSlide, 5000);
 });
 
 function nextSlide() {
-  sliderContainer.scrollLeft += slideWidth;
+  slidingArea.scrollLeft += slideWidth;
 
   currentSlide++;
   if (currentSlide >= totalSlides) {
     currentSlide = 0;
-    sliderContainer.scrollLeft = 0;
+    slidingArea.scrollLeft = 0;
   }
 }
