@@ -1,3 +1,4 @@
+/* Slayt Kodları */
 const previousButton = document.getElementById('prevBtn');
 const nextButton = document.getElementById('nextBtn');
 const slidingArea = document.querySelector('.slidingArea');
@@ -28,3 +29,6 @@ function nextSlide() {
     currentSlide++;
   }
 }
+
+/* Satır Kaydırma Kodları */
+//...

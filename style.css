@@ -77,31 +77,33 @@ header img {
   border: 1px solid blue;
 }
 
-h1 {
-  font-size: x-large;
+h2 {
   margin: 10px;
 }
 
 .line {
   position: relative;
   display: flex;
-  padding: 5px;
+  margin: 10px;
 }
 
 .slidingArea .box {
-  width: calc(100vw / 3 - 20px);
+  width: calc(100% / 3 - 30px);
   border-radius: 10px;
+  margin: 5px;
+  background-color: white;
 }
 
 .slidingArea .box img {
   width: 100%;
-  padding: 0;
+  margin: 0;
   border-radius: 10px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
 .slidingArea .box p {
+  font-weight: bold;
   margin: 0;
   padding: 10px;
 }
