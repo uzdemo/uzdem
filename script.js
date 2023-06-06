@@ -1,18 +1,18 @@
-var previousButton = document.getElementById('prevBtn');
-var nextButton = document.getElementById('nextBtn');
-var slidingArea = document.querySelector('.slidingArea');
-var currentSlide = 0;
-var slideInterval = setInterval(nextSlide, 5000);
-var slideWidth = slidingArea.querySelector('img').offsetWidth;
-var totalSlides = slidingArea.querySelectorAll('img').length;
+const previousButton = document.getElementById('prevBtn');
+const nextButton = document.getElementById('nextBtn');
+const slidingArea = document.querySelector('.slidingArea');
+let currentSlide = 0;
+let slideInterval = setInterval(nextSlide, 5000);
+const slideWidth = slidingArea.querySelector('img').offsetWidth + 10; // 5 piksel sağ kenar boşluğu + 5 piksel sol kenar boşluğu
+const totalSlides = slidingArea.querySelectorAll('img').length;
 
-previousButton.addEventListener('click', function() {
+previousButton.addEventListener('click', () => {
   clearInterval(slideInterval);
   slidingArea.scrollLeft -= slideWidth;
   slideInterval = setInterval(nextSlide, 5000);
 });
 
-nextButton.addEventListener('click', function() {
+nextButton.addEventListener('click', () => {
   clearInterval(slideInterval);
   slidingArea.scrollLeft += slideWidth;
   slideInterval = setInterval(nextSlide, 5000);
@@ -21,9 +21,10 @@ nextButton.addEventListener('click', function() {
 function nextSlide() {
   slidingArea.scrollLeft += slideWidth;
 
-  currentSlide++;
-  if (currentSlide >= totalSlides) {
+  if (currentSlide >= totalSlides - 1) {
     currentSlide = 0;
     slidingArea.scrollLeft = 0;
+  } else {
+    currentSlide++;
   }
 }
