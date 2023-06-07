@@ -78,6 +78,7 @@ header img {
 }
 
 h2 {
+  color: rgb(80, 87, 134);
   margin: 10px;
 }
 
@@ -87,14 +88,35 @@ h2 {
   margin: 10px;
 }
 
-.slidingArea .box {
-  width: calc(100% / 3 - 30px);
+.yeniEklenenlerColor {
+  position:absolute;
+  bottom: 0;
+  width: 100%;
+  height: 25%;
+  background-color: rgb(217, 221, 246);
+  z-index: -1;
+}
+
+.slidingLineArea {
+  display: inline-flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+
+.slidingLineArea::-webkit-scrollbar {
+  display: none;
+}
+
+.slidingLineArea .box {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 calc(100% / 3 - 30px);
   border-radius: 10px;
   margin: 5px;
   background-color: white;
 }
 
-.slidingArea .box img {
+.slidingLineArea .box img {
   width: 100%;
   margin: 0;
   border-radius: 10px;
@@ -106,6 +128,38 @@ h2 {
   font-weight: bold;
   margin: 0;
   padding: 10px;
+}
+
+.slidingLineControls {
+  position: absolute;
+  width: calc(100% - 10px);
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+}
+
+.slidingLineControls button {
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 35px;
+  width: 5vw;
+  height: 5vw;
+  cursor: pointer;
+  pointer-events: all;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.line:hover .slidingLineControls button {
+  opacity: 1;
+}
+
+.slidingLineControls button:hover {
+  border: 1px solid blue;
 }
 
 @media screen and (max-width: 750px) {

@@ -31,4 +31,36 @@ function nextSlide() {
 }
 
 /* Satır Kaydırma Kodları */
-//...
+  const kayanSatirlar = document.querySelectorAll(".line");
+  kayanSatirlar.forEach((satir) => {
+  const kutular = satir.querySelector(".slidingLineArea");
+  const kutuKontrolleri = satir.querySelector(".slidingLineControls");
+  const kutuKontrolSol = satir.querySelector(".lineControl.prev");
+  const kutuKontrolSag = satir.querySelector(".lineControl.next");
+
+  let kutuIndex = 0;
+  let kutuGenislik = kutular.querySelector(".box").offsetWidth;
+
+  kutuKontrolSol.addEventListener("click", () => {
+    kutuIndex--;
+    kaydir();
+  });
+
+  kutuKontrolSag.addEventListener("click", () => {
+    kutuIndex++;
+    kaydir();
+  });
+
+  function kaydir() {
+    if (kutuIndex < 0) {
+      kutuIndex = 0;
+    } else if (kutuIndex > kutular.children.length - 1) {
+      kutuIndex = kutular.children.length - 1;
+    }
+
+    kutular.style.transform = `translateX(-${kutuIndex * (kutuGenislik + 10)}px)`;
+  }
+
+  kaydir();
+});
+
