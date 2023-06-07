@@ -1,6 +1,7 @@
 /* Belge metni fontu */
 body {
   font-family: 'Times New Roman', Times, serif;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 /* Başlık alanı */
@@ -96,6 +97,11 @@ header h1 {
 
 /* İkinci seviye başlık */
 h2 {
+  margin: 5px;
+}
+
+/* Üçüncü seviye başlık */
+h3 {
   color: rgb(80, 87, 134);
   margin: 10px;
 }
