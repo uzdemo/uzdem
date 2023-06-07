@@ -1,14 +1,17 @@
+/* Belge metni fontu */
 body {
   font-family: 'Times New Roman', Times, serif;
 }
 
+/* Başlık alanı */
 header {
   display: flex;
   margin: 10px;
   border-radius: 5px;
-  background-color: rgb(225 225 225 / 25%);
+  background-color: rgba(225, 225, 225, 0.25);
 }
 
+/* Başlık alanındaki resimler */
 header img {
   width: 100px;
   padding: 5px;
@@ -16,36 +19,47 @@ header img {
   border-radius: 10px;
 }
 
-.container {
-  margin: 10px;
-  border-radius: 5px;
-  background-color: rgb(225 225 225 / 25%);
+/* Başlık alanındaki başlık metni */
+header h1 {
+  display: none;
 }
 
-.slider {
+/* İçerik alanı */
+.icerik-alani {
+  margin: 10px;
+  border-radius: 5px;
+  background-color: rgba(225, 225, 225, 0.25);
+}
+
+/* Slayt bölümü */
+.slayt {
   position: relative;
   display: flex;
   justify-content: center;
   margin: 10px;
 }
 
-.slidingArea {
+/* Slayt içinde kayan alan */
+.kayan-alan {
   display: flex;
   overflow-x: scroll;
   scroll-behavior: smooth;
 }
 
-.slidingArea::-webkit-scrollbar {
+/* Kayan alanın kaydırma çubuğu */
+.kayan-alan::-webkit-scrollbar {
   display: none;
 }
 
-.slidingArea img {
+/* Slayt içindeki resimler */
+.kayan-alan img {
   width: calc(50% - 10px);
   margin: 5px;
   border-radius: 10px;
 }
 
-.slider .sliderControls {
+/* Slaytın kaydırma kontrolleri */
+.slayt .kaydirma-kontrolleri {
   position: absolute;
   width: calc(100% - 10px);
   height: 100%;
@@ -55,7 +69,8 @@ header img {
   pointer-events: none;
 }
 
-.sliderControls button {
+/* Slaytın kaydırma kontrolleri butonları */
+.slayt .kaydirma-kontrolleri button {
   background: rgba(0, 0, 0, 0.75);
   color: white;
   border: none;
@@ -69,27 +84,32 @@ header img {
   transition: opacity 0.3s;
 }
 
-.slider:hover .sliderControls button {
+/* Slayt üzerine gelindiğinde kaydırma kontrolleri butonlarının görünürlüğü */
+.slayt:hover .kaydirma-kontrolleri button {
   opacity: 1;
 }
 
-.sliderControls button:hover {
+/* Slaytın kaydırma kontrolleri butonlarının üzerine gelindiğinde border rengi */
+.slayt .kaydirma-kontrolleri button:hover {
   border: 1px solid blue;
 }
 
+/* İkinci seviye başlık */
 h2 {
   color: rgb(80, 87, 134);
   margin: 10px;
 }
 
-.line {
+/* Yeni eklenen satır */
+.yeni-eklenen-satir {
   position: relative;
   display: flex;
   margin: 10px;
 }
 
-.yeniEklenenlerColor {
-  position:absolute;
+/* Yeni eklenen satırın renkli arka planı */
+.yeni-eklenen-renk {
+  position: absolute;
   bottom: 0;
   width: 100%;
   height: 25%;
@@ -97,17 +117,20 @@ h2 {
   z-index: -1;
 }
 
-.slidingLineArea {
+/* Kayan satır alanı */
+.kayan-satir-alani {
   display: inline-flex;
   overflow-x: scroll;
   scroll-behavior: smooth;
 }
 
-.slidingLineArea::-webkit-scrollbar {
+/* Kayan satır alanının kaydırma çubuğu */
+.kayan-satir-alani::-webkit-scrollbar {
   display: none;
 }
 
-.slidingLineArea .box {
+/* Satır içindeki kutular */
+.kutu {
   display: flex;
   flex-direction: column;
   flex: 0 0 calc(100% / 3 - 30px);
@@ -116,7 +139,8 @@ h2 {
   background-color: white;
 }
 
-.slidingLineArea .box img {
+/* Kutunun içindeki resimler */
+.kutu img {
   width: 100%;
   margin: 0;
   border-radius: 10px;
@@ -124,13 +148,15 @@ h2 {
   border-bottom-right-radius: 0;
 }
 
-.slidingArea .box p {
+/* Kutunun içindeki metin */
+.kutu p {
   font-weight: bold;
   margin: 0;
   padding: 10px;
 }
 
-.slidingLineControls {
+/* Satırın kaydırma kontrolleri */
+.satir-kontrolleri {
   position: absolute;
   width: calc(100% - 10px);
   height: 100%;
@@ -140,7 +166,8 @@ h2 {
   pointer-events: none;
 }
 
-.slidingLineControls button {
+/* Satırın kaydırma kontrolleri butonları */
+.satir-kontrolleri button {
   background: rgba(0, 0, 0, 0.75);
   color: white;
   border: none;
@@ -154,17 +181,31 @@ h2 {
   transition: opacity 0.3s;
 }
 
-.line:hover .slidingLineControls button {
+/* Satır üzerine gelindiğinde kaydırma kontrolleri butonlarının görünürlüğü */
+.satir-kontrolleri:hover button {
   opacity: 1;
 }
 
-.slidingLineControls button:hover {
+/* Satırın kaydırma kontrolleri butonlarının üzerine gelindiğinde border rengi */
+.satir-kontrolleri button:hover {
   border: 1px solid blue;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1080px) {
+
+  header {
+    background-color: rgb(25, 118, 210);
+  }
+
   header img {
-    width: 15vw;
+    display: none;
+  }
+
+  header h1 {
+    display: block;
+    color: white;
+    margin: 5px;
+    margin-left: 15px;
   }
 
   .slidingArea img {
