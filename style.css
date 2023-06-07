@@ -95,9 +95,43 @@ header h1 {
   border: 1px solid blue;
 }
 
+/* Hızlı erişim yapılandırması */
+.hizli-erisim {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* İkinci seviye başlık */
 h2 {
   margin: 5px;
+}
+
+.kategoriler {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  max-height: 100px;
+  overflow-x: scroll;
+}
+
+.kategoriler::-webkit-scrollbar {
+  display: none;
+}
+
+.kategoriler a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: inherit;
+  text-decoration: inherit;
+  width: 200px;
+  height: 30px;
+  margin: 5px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
 }
 
 /* Üçüncü seviye başlık */
@@ -188,7 +222,7 @@ h3 {
 }
 
 /* Satır üzerine gelindiğinde kaydırma kontrolleri butonlarının görünürlüğü */
-.satir-kontrolleri:hover button {
+.yeni-eklenen-satir:hover .satir-kontrolleri button {
   opacity: 1;
 }
 
@@ -212,13 +246,5 @@ h3 {
     color: white;
     margin: 5px;
     margin-left: 15px;
-  }
-
-  .slidingArea img {
-    width: calc(100% - 10px);
-  }
-
-  .slidingArea .box {
-    width: calc(50vw - 20px);
   }
 }
