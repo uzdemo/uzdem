@@ -35,12 +35,10 @@ header h1 {
 /* Slayt bölümü */
 .slayt {
   position: relative;
-  display: flex;
-  justify-content: center;
   margin: 10px;
 }
 
-/* Slayt içinde kayan alan */
+/* Kayan alan varsayılanları */
 .kayan-alan {
   display: flex;
   overflow-x: scroll;
@@ -52,46 +50,46 @@ header h1 {
   display: none;
 }
 
-/* Slayt içindeki resimler */
-.kayan-alan img {
-  width: calc(50% - 10px);
+.kayan-alan a {
+  flex: 0 0 calc(50% - 10px);
   margin: 5px;
+}
+
+/* Slayt içindeki resimler */
+.kayan-alan a img {
+  width: 100%;
   border-radius: 10px;
 }
 
-/* Slaytın kaydırma kontrolleri */
-.slayt .kaydirma-kontrolleri {
-  position: absolute;
-  width: calc(100% - 10px);
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  pointer-events: none;
-}
-
 /* Slaytın kaydırma kontrolleri butonları */
-.slayt .kaydirma-kontrolleri button {
+.slayt button {
+  position: absolute;
+  top: 43%;
   background: rgba(0, 0, 0, 0.75);
   color: white;
-  border: none;
   border-radius: 5px;
-  font-size: 35px;
-  width: 5vw;
-  height: 5vw;
+  width: 4%;
+  height: 13%;
   cursor: pointer;
-  pointer-events: all;
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.5s;
+}
+
+.kaydirma-kontrol-onceki {
+  left: 5px;
+}
+
+.kaydirma-kontrol-sonraki {
+  right: 5px;
 }
 
 /* Slayt üzerine gelindiğinde kaydırma kontrolleri butonlarının görünürlüğü */
-.slayt:hover .kaydirma-kontrolleri button {
+.slayt:hover button {
   opacity: 1;
 }
 
 /* Slaytın kaydırma kontrolleri butonlarının üzerine gelindiğinde border rengi */
-.slayt .kaydirma-kontrolleri button:hover {
+.slayt button:hover {
   border: 1px solid blue;
 }
 
@@ -101,20 +99,17 @@ header h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-/* İkinci seviye başlık */
-h2 {
-  margin: 5px;
+  margin: 10px;
 }
 
 .kategoriler {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 100%;
+  width: calc(100% - 10px);
   max-height: 100px;
   overflow-x: scroll;
+  scroll-behavior: smooth;
 }
 
 .kategoriler::-webkit-scrollbar {
@@ -130,36 +125,66 @@ h2 {
   width: 200px;
   height: 30px;
   margin: 5px;
+  margin-left: 0;
   background-color: #e0e0e0;
   border-radius: 10px;
 }
 
+.hizli-erisim button {
+  position: absolute;
+  top: 60%;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  border-radius: 5px;
+  width: 4%;
+  height: 23%;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.satir-kontrol-onceki {
+  left: 5px;
+}
+
+.satir-kontrol-sonraki {
+  right: 5px;
+}
+
+.hizli-erisim:hover button {
+  opacity: 1;
+}
+
+.hizli-erisim button:hover {
+  border: 1px solid blue;
+}
+
 /* Üçüncü seviye başlık */
-h3 {
+.yeni-eklenen-satir h3 {
   color: rgb(80, 87, 134);
-  margin: 10px;
+  margin-left: 10px;
 }
 
 /* Yeni eklenen satır */
 .yeni-eklenen-satir {
   position: relative;
-  display: flex;
   margin: 10px;
 }
 
 /* Yeni eklenen satırın renkli arka planı */
-.yeni-eklenen-renk {
+.yeni-eklenenler-renk {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 25%;
   background-color: rgb(217, 221, 246);
+  border-radius: 10px;
   z-index: -1;
 }
 
 /* Kayan satır alanı */
 .kayan-satir-alani {
-  display: inline-flex;
+  display: flex;
   overflow-x: scroll;
   scroll-behavior: smooth;
 }
@@ -171,11 +196,13 @@ h3 {
 
 /* Satır içindeki kutular */
 .kutu {
+  text-decoration: none;
   display: flex;
   flex-direction: column;
   flex: 0 0 calc(100% / 3 - 30px);
   border-radius: 10px;
-  margin: 5px;
+  margin: 15px;
+  margin-top: 0;
   background-color: white;
 }
 
@@ -190,44 +217,39 @@ h3 {
 
 /* Kutunun içindeki metin */
 .kutu p {
+  color: rgba(0, 0, 0, 0.87);
   font-weight: bold;
-  margin: 0;
-  padding: 10px;
+  margin-left: 10px;
 }
 
-/* Satırın kaydırma kontrolleri */
-.satir-kontrolleri {
+.yeni-eklenen-satir button {
   position: absolute;
-  width: calc(100% - 10px);
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  pointer-events: none;
-}
-
-/* Satırın kaydırma kontrolleri butonları */
-.satir-kontrolleri button {
+  top: 50%;
   background: rgba(0, 0, 0, 0.75);
   color: white;
-  border: none;
   border-radius: 5px;
-  font-size: 35px;
-  width: 5vw;
-  height: 5vw;
+  width: 4%;
+  height: 15%;
   cursor: pointer;
-  pointer-events: all;
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.5s;
+}
+
+.yeni-eklenen-satir .satir-kontrol-onceki {
+  left: 15px;
+}
+
+.yeni-eklenen-satir .satir-kontrol-sonraki {
+  right: 15px;
 }
 
 /* Satır üzerine gelindiğinde kaydırma kontrolleri butonlarının görünürlüğü */
-.yeni-eklenen-satir:hover .satir-kontrolleri button {
+.yeni-eklenen-satir:hover button {
   opacity: 1;
 }
 
 /* Satırın kaydırma kontrolleri butonlarının üzerine gelindiğinde border rengi */
-.satir-kontrolleri button:hover {
+.yeni-eklenen-satir button:hover {
   border: 1px solid blue;
 }
 
@@ -246,5 +268,9 @@ h3 {
     color: white;
     margin: 5px;
     margin-left: 15px;
+  }
+
+  .slayt a {
+    flex: 0 0 calc(100% - 10px);
   }
 }

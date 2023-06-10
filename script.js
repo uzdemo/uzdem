@@ -51,7 +51,6 @@ const kayanSatirlar = document.querySelectorAll(".yeni-eklenen-satir");
 kayanSatirlar.forEach((satir) => {
   // Satırdaki kutu alanını, kontrol düğmelerini ve sola ve sağa kaydırma düğmelerini seçme
   const kutular = satir.querySelector(".kayan-satir-alani");
-  const kutuKontrolleri = satir.querySelector(".satir-kontrolleri");
   const kutuKontrolSol = satir.querySelector(".onceki");
   const kutuKontrolSag = satir.querySelector(".sonraki");
 
