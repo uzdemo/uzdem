@@ -95,14 +95,12 @@ header h1 {
 
 /* Hızlı erişim yapılandırması */
 .hizli-erisim {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10px;
 }
 
-.kayan-alan {
+.hizli-erisim .satir {
   width: 100%;
 }
 
@@ -110,13 +108,10 @@ header h1 {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin: 5px;
   max-height: 100px;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
 }
 
-.hizli-erisim .icerik::-webkit-scrollbar {
+.hizli-erisim::-webkit-scrollbar {
   display: none;
 }
 
@@ -130,13 +125,14 @@ header h1 {
   height: 30px;
   margin: 5px;
   margin-left: 0;
+  margin-right: 30px;
   background-color: #e0e0e0;
   border-radius: 10px;
 }
 
-.hizli-erisim button {
+.hizli-erisim .satir button {
   position: absolute;
-  top: 55%;
+  top: 20%;
   background: rgba(0, 0, 0, 0.75);
   color: white;
   border-radius: 5px;
@@ -147,12 +143,12 @@ header h1 {
   transition: opacity 0.5s;
 }
 
-.hizli-erisim .satir-kontrol-onceki {
-  left: 5px;
+.hizli-erisim .onceki {
+  left: 0;
 }
 
-.hizli-erisim .satir-kontrol-sonraki {
-  right: 5px;
+.hizli-erisim .sonraki {
+  right: 0;
 }
 
 .hizli-erisim:hover button {
@@ -173,6 +169,8 @@ header h1 {
 .satir {
   position: relative;
   margin: 10px;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
 }
 
 /* Yeni eklenen satırın renkli arka planı */
@@ -189,18 +187,15 @@ header h1 {
 /* Kayan satır alanı */
 .icerik {
   display: flex;
-  margin: 5px;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
 }
 
 /* Kayan satır alanının kaydırma çubuğu */
-.icerik::-webkit-scrollbar {
+.satir::-webkit-scrollbar {
   display: none;
 }
 
 /* Satır içindeki kutular */
-.satir .kutu {
+.satir .ders {
   text-decoration: none;
   display: flex;
   flex-direction: column;
@@ -240,12 +235,12 @@ header h1 {
   transition: opacity 0.5s;
 }
 
-.satir .satir-kontrol-onceki {
-  left: 20px;
+.satir .onceki {
+  left: 15px;
 }
 
-.satir .satir-kontrol-sonraki {
-  right: 20px;
+.satir .sonraki {
+  right: 15px;
 }
 
 /* Satır üzerine gelindiğinde kaydırma kontrolleri butonlarının görünürlüğü */
