@@ -5,7 +5,7 @@ const previousButton = document.getElementById('oncekiBtn');
 const nextButton = document.getElementById('sonrakiBtn');
 
 // Slayt alanını seçme
-const slidingArea = document.querySelector('.kayan-alan');
+const slidingArea = document.querySelector('.slayt-alani');
 
 // Geçerli slaytın indeksi ve slayt geçiş aralığını tanımlama
 let currentSlide = 0;
@@ -42,46 +42,3 @@ function nextSlide() {
     currentSlide++;
   }
 }
-
-/* Satır Kaydırma Kodları */
-
-// Kayan satırları seçme
-const kayanSatirlar = document.querySelectorAll(".yeni-eklenen-satir");
-
-kayanSatirlar.forEach((satir) => {
-  // Satırdaki kutu alanını, kontrol düğmelerini ve sola ve sağa kaydırma düğmelerini seçme
-  const kutular = satir.querySelector(".kayan-satir-alani");
-  const kutuKontrolSol = satir.querySelector(".onceki");
-  const kutuKontrolSag = satir.querySelector(".sonraki");
-
-  let kutuIndex = 0;
-  let kutuGenislik = kutular.querySelector(".kutu").offsetWidth;
-
-  // Sol kaydırma düğmesine tıklama olayı
-  kutuKontrolSol.addEventListener("click", () => {
-    kutuIndex--;
-    kaydir();
-  });
-
-  // Sağ kaydırma düğmesine tıklama olayı
-  kutuKontrolSag.addEventListener("click", () => {
-    kutuIndex++;
-    kaydir();
-  });
-
-  // Kutuları yatay olarak kaydırma fonksiyonu
-  function kaydir() {
-    if (kutuIndex < 0) {
-      // İndeks sınırlarını kontrol etme ve negatif değerleri sıfıra eşitleme
-      kutuIndex = 0;
-    } else if (kutuIndex > kutular.children.length - 1) {
-      // İndeks sınırlarını kontrol etme ve fazla değerleri son kutu indeksiyle sınırlama
-      kutuIndex = kutular.children.length - 1;
-    }
-
-    // Kutuları yatay olarak kaydırma
-    kutular.style.transform = `translateX(-${kutuIndex * (kutuGenislik + 10)}px)`;
-  }
-
-  kaydir();
-});

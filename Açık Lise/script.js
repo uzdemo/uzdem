@@ -1,7 +1,6 @@
 const kayanSatirlar = document.querySelectorAll(".line");
 kayanSatirlar.forEach((satir) => {
   const kutular = satir.querySelector(".sliding-box-container");
-  const kutuKontrolleri = satir.querySelector(".box-control");
   const kutuKontrolSol = satir.querySelector(".box-control .prev-box");
   const kutuKontrolSag = satir.querySelector(".box-control .next-box");
 
