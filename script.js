@@ -5,7 +5,7 @@ const previousButton = document.getElementById('oncekiBtn');
 const nextButton = document.getElementById('sonrakiBtn');
 
 // Slayt alanını seçme
-const slidingArea = document.querySelector('.slayt-alani');
+const slidingArea = document.getElementById('slayt-alani');
 
 // Geçerli slaytın indeksi ve slayt geçiş aralığını tanımlama
 let currentSlide = 0;
@@ -46,13 +46,13 @@ function nextSlide() {
 /* Satır Kaydırma Kodları */
 
 // Kayan satırları seçme
-const kayanSatirlar = document.querySelectorAll(".satir");
+const kayanSatirlar = document.querySelectorAll(".icerik");
 
-kayanSatirlar.forEach((satir) => {
+kayanSatirlar.forEach((icerik) => {
   // Satırdaki kutu alanını, kontrol düğmelerini ve sola ve sağa kaydırma düğmelerini seçme
-  const kutular = satir.querySelector(".icerik");
-  const kutuKontrolSol = satir.querySelector(".onceki");
-  const kutuKontrolSag = satir.querySelector(".sonraki");
+  const kutular = icerik.querySelector("icerik");
+  const kutuKontrolSol = icerik.querySelector(".onceki");
+  const kutuKontrolSag = icerik.querySelector(".sonraki");
 
   let kutuIndex = 0;
   let kutuGenislik = kutular.querySelector(".kutu").offsetWidth;

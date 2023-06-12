@@ -1,10 +1,8 @@
-/* Belge metni fontu */
 body {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: rgba(0, 0, 0, 0.87);
 }
 
-/* Başlık alanı */
 header {
   display: flex;
   margin: 10px;
@@ -12,7 +10,6 @@ header {
   background-color: rgba(225, 225, 225, 0.25);
 }
 
-/* Başlık alanındaki resimler */
 header img {
   width: 100px;
   padding: 5px;
@@ -20,32 +17,27 @@ header img {
   border-radius: 10px;
 }
 
-/* Başlık alanındaki başlık metni */
 header h1 {
   display: none;
 }
 
-/* İçerik alanı */
 .kapsayici {
   margin: 10px;
   border-radius: 5px;
   background-color: rgba(225, 225, 225, 0.25);
 }
 
-/* Slayt bölümü */
 .slayt {
   position: relative;
   margin: 10px;
 }
 
-/* Kayan alan varsayılanları */
-.slayt-alani {
+.yatay-duzlem {
   display: flex;
   overflow-x: scroll;
   scroll-behavior: smooth;
 }
 
-/* Kayan alanın kaydırma çubuğu */
 .slayt-alani::-webkit-scrollbar {
   display: none;
 }
@@ -55,16 +47,13 @@ header h1 {
   margin: 5px;
 }
 
-/* Slayt içindeki resimler */
 .slayt-alani a img {
   width: 100%;
   border-radius: 10px;
 }
 
-/* Slaytın kaydırma kontrolleri butonları */
-.slayt button {
+button {
   position: absolute;
-  top: 45%;
   background: rgba(0, 0, 0, 0.75);
   color: white;
   border-radius: 5px;
@@ -75,105 +64,104 @@ header h1 {
   transition: opacity 0.5s;
 }
 
-.slayt-kontrol-onceki {
+.slayt button {
+  top: 45%;
+}
+
+.onceki {
+  left: 0;
+}
+
+.sonraki {
+  right: 0;
+}
+
+.slayt .onceki {
   left: 5px;
 }
 
-.slayt-kontrol-sonraki {
+.slayt .sonraki {
   right: 5px;
 }
 
-/* Slayt üzerine gelindiğinde kaydırma kontrolleri butonlarının görünürlüğü */
 .slayt:hover button {
   opacity: 1;
 }
 
-/* Slaytın kaydırma kontrolleri butonlarının üzerine gelindiğinde border rengi */
-.slayt button:hover {
+button:hover {
   border: 1px solid blue;
 }
 
-/* Hızlı erişim yapılandırması */
-.hizli-erisim {
+.kategoriler {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.hizli-erisim .satir {
-  width: 100%;
+.satir {
+  position: relative;
+}
+
+.kategoriler .satir {
+  width: calc(100% - 20px);
+}
+
+.icerik {
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+
+.icerik::-webkit-scrollbar {
+  display: none;
 }
 
 .hizli-erisim .icerik {
-  display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   max-height: 100px;
 }
 
-.hizli-erisim::-webkit-scrollbar {
-  display: none;
+.icerik a {
+  text-decoration: none;
+  display: flex;
+  border-radius: 10px;
 }
 
 .hizli-erisim .icerik a{
-  display: flex;
   justify-content: center;
   align-items: center;
   color: inherit;
-  text-decoration: inherit;
   width: 200px;
   height: 30px;
   margin: 5px;
   margin-left: 0;
   margin-right: 30px;
   background-color: #e0e0e0;
-  border-radius: 10px;
 }
 
 .hizli-erisim .satir button {
-  position: absolute;
   top: 20%;
-  background: rgba(0, 0, 0, 0.75);
-  color: white;
-  border-radius: 5px;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-
-.hizli-erisim .onceki {
-  left: 0;
-}
-
-.hizli-erisim .sonraki {
-  right: 0;
 }
 
 .hizli-erisim:hover button {
   opacity: 1;
 }
 
-.hizli-erisim button:hover {
+button:hover {
   border: 1px solid blue;
 }
 
-/* Üçüncü seviye başlık */
 .satir h3 {
-  color: rgb(80, 87, 134);
+  color: inherit;
   margin-left: 10px;
 }
 
-/* Yeni eklenen satır */
-.satir {
-  position: relative;
-  margin: 10px;
-  overflow-x: scroll;
-  scroll-behavior: smooth;
+.yeni-eklenenler {
+  color: rgb(80, 87, 134);
 }
 
-/* Yeni eklenen satırın renkli arka planı */
 .yeni-eklenenler-renk {
   position: absolute;
   bottom: 0;
@@ -190,9 +178,7 @@ header h1 {
 }
 
 /* Kayan satır alanının kaydırma çubuğu */
-.satir::-webkit-scrollbar {
-  display: none;
-}
+
 
 /* Satır içindeki kutular */
 .satir .ders {
@@ -223,16 +209,7 @@ header h1 {
 }
 
 .satir button {
-  position: absolute;
   top: 50%;
-  background: rgba(0, 0, 0, 0.75);
-  color: white;
-  border-radius: 5px;
-  width: 4%;
-  height: 15%;
-  cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.5s;
 }
 
 .satir .onceki {
@@ -249,7 +226,7 @@ header h1 {
 }
 
 /* Satırın kaydırma kontrolleri butonlarının üzerine gelindiğinde border rengi */
-.satir button:hover {
+button:hover {
   border: 1px solid blue;
 }
 
