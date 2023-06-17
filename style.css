@@ -193,6 +193,10 @@ button:hover {
     flex: 0 0 calc(100% - 20px);
   }
 
+  button {
+    display: none;
+  }
+
   #kategoriler .yatay-duzlem a {
     min-width: calc(100% / 3 - 20px);
   }
