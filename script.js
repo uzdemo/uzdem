@@ -12,7 +12,7 @@ let currentSlide = 0;
 let slideInterval = setInterval(nextSlide, 5000);
 
 // Slayt genişliği ve toplam slayt sayısını belirleme
-const slideWidth = slidingArea.querySelector('img').offsetWidth + 10; // 5 piksel sağ kenar boşluğu + 5 piksel sol kenar boşluğu
+const slideWidth = slidingArea.querySelector('img').offsetWidth + 20; // 10 piksel sağ kenar boşluğu + 10 piksel sol kenar boşluğu
 const totalSlides = slidingArea.querySelectorAll('img').length;
 
 // Önceki düğmeye tıklama olayı
@@ -46,13 +46,13 @@ function nextSlide() {
 /* Satır Kaydırma Kodları */
 
 // Kayan satırları seçme
-const kayanSatirlar = document.querySelectorAll(".icerik");
+const kayanSatirlar = document.querySelectorAll(".satir");
 
-kayanSatirlar.forEach((icerik) => {
+kayanSatirlar.forEach((satir) => {
   // Satırdaki kutu alanını, kontrol düğmelerini ve sola ve sağa kaydırma düğmelerini seçme
-  const kutular = icerik.querySelector("icerik");
-  const kutuKontrolSol = icerik.querySelector(".onceki");
-  const kutuKontrolSag = icerik.querySelector(".sonraki");
+  const kutular = satir.querySelector(".yatay-duzlem");
+  const kutuKontrolSol = satir.querySelector(".onceki");
+  const kutuKontrolSag = satir.querySelector(".sonraki");
 
   let kutuIndex = 0;
   let kutuGenislik = kutular.querySelector(".kutu").offsetWidth;
@@ -80,7 +80,7 @@ kayanSatirlar.forEach((icerik) => {
     }
 
     // Kutuları yatay olarak kaydırma
-    kutular.style.transform = `translateX(-${kutuIndex * (kutuGenislik + 30)}px)`;
+    kutular.style.transform = `translateX(-${kutuIndex * (kutuGenislik + 20)}px)`;
   }
 
   kaydir();

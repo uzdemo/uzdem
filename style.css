@@ -34,17 +34,28 @@ header h1 {
 
 .yatay-duzlem {
   display: flex;
+}
+
+#slayt-alani {
   overflow-x: scroll;
   scroll-behavior: smooth;
 }
 
-.yatay-duzlem::-webkit-scrollbar {
+#slayt-alani::-webkit-scrollbar {
   display: none;
 }
 
-.slayt .yatay-duzlem a {
-  flex: 0 0 calc(50% - 10px);
-  margin: 5px;
+.yatay-duzlem a{
+  display: flex;
+  text-decoration: none;
+  margin: 10px;
+  border-radius: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#slayt-alani a {
+  flex: 0 0 calc(50% - 20px);
 }
 
 .yatay-duzlem a img {
@@ -54,6 +65,7 @@ header h1 {
 
 button {
   position: absolute;
+  top: calc(50% - 25px);
   background: rgba(0, 0, 0, 0.75);
   color: white;
   border-radius: 5px;
@@ -64,48 +76,34 @@ button {
   transition: opacity 0.5s;
 }
 
-.slayt button {
-  top: 45%;
+.slayt:hover button {
+  opacity: 1;
 }
 
 .onceki {
-  left: 0;
+  left: 10px;
 }
 
 .sonraki {
-  right: 0;
-}
-
-.slayt .onceki {
-  left: 5px;
-}
-
-.slayt .sonraki {
-  right: 5px;
-}
-
-.slayt:hover button {
-  opacity: 1;
+  right: 10px;
 }
 
 button:hover {
   border: 1px solid blue;
 }
 
-.kategoriler {
-  position: relative;
+#kategoriler {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10px;
 }
 
-.kategoriler .satir {
-  width: calc(100% - 20px);
+.satir {
+  position: relative;
+  width: 100%;
 }
 
 .kayan-alan {
-  display: flex;
   overflow-x: scroll;
   scroll-behavior: smooth;
 }
@@ -114,117 +112,64 @@ button:hover {
   display: none;
 }
 
-.kategoriler .yatay-duzlem {
+#kategoriler .yatay-duzlem {
   flex-direction: column;
   flex-wrap: wrap;
   max-height: 100px;
 }
 
-.yatay-duzlem a {
-  text-decoration: none;
-  display: flex;
-  border-radius: 10px;
-}
-
-.kategoriler .yatay-duzlem a{
+#kategoriler .yatay-duzlem a{
   justify-content: center;
   align-items: center;
   color: inherit;
-  width: 200px;
+  min-width: calc(20% - 20px);
   height: 30px;
-  margin: 5px;
-  margin-left: 0;
-  margin-right: 30px;
   background-color: #e0e0e0;
 }
 
-.hizli-erisim .satir button {
-  top: 20%;
-}
-
-.hizli-erisim:hover button {
+.satir:hover button {
   opacity: 1;
 }
 
-button:hover {
-  border: 1px solid blue;
+.kurslar {
+  position: relative;
+  margin: 10px;
 }
 
-.satir h3 {
+#yeni-eklenenler {
+  color: rgb(80, 87, 134);
+}
+
+.kurslar h3 {
   color: inherit;
   margin-left: 10px;
 }
 
-.yeni-eklenenler {
-  color: rgb(80, 87, 134);
-}
-
-.yeni-eklenenler-renk {
+#yeni-eklenenler-arkaplan {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 25%;
+  height: 60px;
   background-color: rgb(217, 221, 246);
   border-radius: 10px;
   z-index: -1;
 }
 
-/* Kayan satır alanı */
-.icerik {
-  display: flex;
-}
-
-/* Kayan satır alanının kaydırma çubuğu */
-
-
-/* Satır içindeki kutular */
-.satir .ders {
-  text-decoration: none;
-  display: flex;
+.kurslar .kutu {
   flex-direction: column;
-  flex: 0 0 calc(100% / 3 - 30px);
-  border-radius: 10px;
-  margin: 15px;
-  margin-top: 0;
+  flex: 0 0 calc(100% / 3 - 20px);
   background-color: white;
 }
 
-/* Kutunun içindeki resimler */
-.kutu img {
-  width: 100%;
-  margin: 0;
-  border-radius: 10px;
+.yatay-duzlem .kutu img {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-/* Kutunun içindeki metin */
 .kutu p {
   color: rgba(0, 0, 0, 0.87);
   font-weight: bold;
   margin-left: 10px;
-}
-
-.satir button {
-  top: 50%;
-}
-
-.satir .onceki {
-  left: 15px;
-}
-
-.satir .sonraki {
-  right: 15px;
-}
-
-/* Satır üzerine gelindiğinde kaydırma kontrolleri butonlarının görünürlüğü */
-.satir:hover button {
-  opacity: 1;
-}
-
-/* Satırın kaydırma kontrolleri butonlarının üzerine gelindiğinde border rengi */
-button:hover {
-  border: 1px solid blue;
 }
 
 @media screen and (max-width: 1080px) {
@@ -244,7 +189,15 @@ button:hover {
     margin-left: 15px;
   }
 
-  .slayt a {
-    flex: 0 0 calc(100% - 10px);
+  #slayt-alani a {
+    flex: 0 0 calc(100% - 20px);
+  }
+
+  #kategoriler .yatay-duzlem a {
+    min-width: calc(100% / 3 - 20px);
+  }
+
+  .kurslar .kutu {
+    flex: 0 0 calc(50% - 20px);
   }
 }
