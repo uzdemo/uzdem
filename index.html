@@ -2,12 +2,14 @@
 <html lang="tr">
   <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Uzdem LMS - Çevrimiçi Öğrenme Platformu: Uzdem LMS, çocuklar ve gençler için interaktif ve kapsamlı ders içerikleri sunan yenilikçi bir çevrimiçi öğrenme platformudur. Matematik, fen bilimleri, sosyal bilgiler, Türkçe, İngilizce ve daha fazlasıyla eğlenceli ve etkili bir öğrenme deneyimi yaşayın. Ücretsiz kaydolun ve eğitim yolculuğunuza adım atın!">
+    <meta name="author" content="Falan ZAT">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uzdem</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.css">
+    <script src="script.js" defer></script>
   </head>
   <body>
     <header>
@@ -48,12 +50,8 @@
             <img src="Slayt/Sosyal.webp" alt="">
           </a>
         </div>
-        <button class="onceki" id="oncekiBtn">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="sonraki" id="sonrakiBtn">
-          <i class="fas fa-chevron-right"></i>
-        </button>
+        <button class="onceki" id="oncekiBtn"><</button>
+        <button class="sonraki" id="sonrakiBtn">></button>
       </div>
       <nav id="kategoriler">
         <h2>Kategoriler</h2>
@@ -87,12 +85,8 @@
               <a class="kutu" href="#">Eğitim</a>
             </div>
           </div>
-          <button class="onceki">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <button class="sonraki">
-            <i class="fas fa-chevron-right"></i>
-          </button>
+          <button class="onceki"><</button>
+          <button class="sonraki">></button>
         </div>
       </nav>
       <div class="kurslar" id="yeni-eklenenler">
@@ -146,17 +140,12 @@
               </a>
             </div>
           </div>
-          <button class="onceki">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <button class="sonraki">
-            <i class="fas fa-chevron-right"></i>
-          </button>
+          <button class="onceki"><</button>
+          <button class="sonraki">></button>
           <span id="yeni-eklenenler-arkaplan"></span>
         </div>
       </div>
     </div>
-    <script src="script.js"></script>
     <footer>
       <p>© 2023 uzdem.dev Tüm hakları saklıdır.</p>
     </footer>
