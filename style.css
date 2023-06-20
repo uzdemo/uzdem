@@ -34,6 +34,7 @@ header h1 {
 
 .yatay-duzlem {
   display: flex;
+  margin: 0;
 }
 
 #slayt-alani {
