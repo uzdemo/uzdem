@@ -33,7 +33,6 @@ function nextSlide() {
     currentSlide++;
   }
 }
-
 /* Satır Kaydırma Kodları */
 
 const kayanSatirlar = document.querySelectorAll(".satir");
