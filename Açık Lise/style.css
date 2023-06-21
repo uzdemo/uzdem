@@ -132,6 +132,10 @@ a p {
     display: none;
   }
 
+  header a {
+    text-decoration: none;
+  }
+
   header h1 {
     display: block;
     color: white;
