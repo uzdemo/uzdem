@@ -35,36 +35,35 @@ function nextSlide() {
 }
 /* Satır Kaydırma Kodları */
 
-const kayanSatirlar = document.querySelectorAll(".satir");
+  const kayanSatirlar = document.querySelectorAll(".satir");
 
-kayanSatirlar.forEach((satir) => {
+  kayanSatirlar.forEach((satir) => {
+    const kutular = satir.querySelector(".yatay-duzlem");
+    const kutuKontrolSol = satir.querySelector(".onceki");
+    const kutuKontrolSag = satir.querySelector(".sonraki");
 
-  const kutular = satir.querySelector(".yatay-duzlem");
-  const kutuKontrolSol = satir.querySelector(".onceki");
-  const kutuKontrolSag = satir.querySelector(".sonraki");
+    let kutuIndex = 0;
+    const kutuGenislik = kutular.querySelector(".kutu").offsetWidth + 20; // Kutu genişliği ve kenar boşluğu
+    const kutuSayisi = kutular.querySelectorAll(".kutu").length;
 
-  let kutuIndex = 0;
-  let kutuGenislik = kutular.querySelector(".kutu").offsetWidth;
+    kutuKontrolSol.addEventListener("click", function () {
+      kaydir(-1);
+    });
 
-  kutuKontrolSol.addEventListener("click", () => {
-    kutuIndex--;
-    kaydir();
-  });
+    kutuKontrolSag.addEventListener("click", function () {
+      kaydir(1);
+    });
 
-  kutuKontrolSag.addEventListener("click", () => {
-    kutuIndex++;
-    kaydir();
-  });
+    function kaydir(adim) {
+      kutuIndex += adim;
 
-  function kaydir() {
-    if (kutuIndex < 0) {
-      kutuIndex = 0;
-    } else if (kutuIndex > kutular.children.length - 1) {
-      kutuIndex = kutular.children.length - 1;
+      if (kutuIndex < 0) {
+        kutuIndex = kutuSayisi - 1;
+      } else if (kutuIndex >= kutuSayisi) {
+        kutuIndex = 0;
+      }
+
+      const kaydirmaMesafe = -kutuIndex * kutuGenislik;
+      kutular.style.transform = `translateX(${kaydirmaMesafe}px)`;
     }
-
-    kutular.style.transform = `translateX(-${kutuIndex * (kutuGenislik + 20)}px)`;
-  }
-
-  kaydir();
-});
+  });
